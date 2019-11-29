@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="StaffMember" representedClassName="StaffMember" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" attributeType="String" defaultValueString=""/>
+        <attribute name="lastName" attributeType="String" defaultValueString=""/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <relationship name="workingDays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkingDay" inverseName="doctor" inverseEntity="WorkingDay"/>
+    </entity>
+    <entity name="WorkingDay" representedClassName="WorkingDay" syncable="YES" codeGenerationType="class">
+        <attribute name="day" attributeType="String" defaultValueString="Monday"/>
+        <attribute name="endingHour" attributeType="Date" defaultDateTimeInterval="595870200" usesScalarValueType="NO"/>
+        <attribute name="startingHour" attributeType="Date" defaultDateTimeInterval="595870200" usesScalarValueType="NO"/>
+        <relationship name="doctor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StaffMember" inverseName="workingDays" inverseEntity="StaffMember"/>
+    </entity>
+    <elements>
+        <element name="StaffMember" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="WorkingDay" positionX="-54" positionY="18" width="128" height="103"/>
+    </elements>
 </model>

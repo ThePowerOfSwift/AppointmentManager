@@ -117,16 +117,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saq-xp-c3b">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="1121"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CYq-oC-zB6"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="278" height="1129"/>
                                 <connections>
                                     <segue destination="Pce-ub-aHg" kind="embed" identifier="personsTableSegue" id="kqE-Sy-ymt"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyv-dy-ERq">
-                                <rect key="frame" x="308" y="0.0" width="526" height="1121"/>
+                                <rect key="frame" x="278" y="0.0" width="556" height="1129"/>
                                 <connections>
                                     <segue destination="mRN-fo-sLW" kind="embed" id="yCg-xU-SKd"/>
                                 </connections>
@@ -134,13 +131,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="trailing" secondItem="20V-tb-D9G" secondAttribute="trailing" id="HxX-DU-kB1"/>
-                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="leading" secondItem="saq-xp-c3b" secondAttribute="trailing" constant="8" id="MWh-MK-wdr"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="saq-xp-c3b" secondAttribute="bottom" constant="8" id="WHk-6z-izG"/>
-                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="top" secondItem="20V-tb-D9G" secondAttribute="top" id="fLs-cS-Gut"/>
-                            <constraint firstItem="saq-xp-c3b" firstAttribute="leading" secondItem="20V-tb-D9G" secondAttribute="leading" id="sBp-2A-E4r"/>
-                            <constraint firstItem="saq-xp-c3b" firstAttribute="top" secondItem="20V-tb-D9G" secondAttribute="top" id="sC2-PU-t9N"/>
-                            <constraint firstItem="20V-tb-D9G" firstAttribute="bottom" secondItem="Uyv-dy-ERq" secondAttribute="bottom" constant="8" id="t1s-aU-deY"/>
+                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="top" secondItem="yPD-Ix-Siz" secondAttribute="top" id="7ik-ui-Bav"/>
+                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="leading" secondItem="saq-xp-c3b" secondAttribute="trailing" id="F1U-vE-Gcd"/>
+                            <constraint firstItem="saq-xp-c3b" firstAttribute="top" secondItem="yPD-Ix-Siz" secondAttribute="top" id="J40-YZ-eTT"/>
+                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="bottom" secondItem="20V-tb-D9G" secondAttribute="bottom" id="YwZ-Za-TB0"/>
+                            <constraint firstItem="saq-xp-c3b" firstAttribute="bottom" secondItem="20V-tb-D9G" secondAttribute="bottom" id="edD-Ab-aCu"/>
+                            <constraint firstItem="saq-xp-c3b" firstAttribute="leading" secondItem="yPD-Ix-Siz" secondAttribute="leading" id="hf1-pu-gBz"/>
+                            <constraint firstItem="Uyv-dy-ERq" firstAttribute="width" secondItem="saq-xp-c3b" secondAttribute="width" multiplier="2" id="jtJ-SY-74k"/>
+                            <constraint firstAttribute="trailing" secondItem="Uyv-dy-ERq" secondAttribute="trailing" id="l0D-7f-EU2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="20V-tb-D9G"/>
                     </view>
@@ -155,46 +153,44 @@
             <objects>
                 <viewController id="2bW-js-R8Z" customClass="PersonsViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mnb-sW-SB4">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="1121"/>
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="1129"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3xb-8e-c2F">
-                                <rect key="frame" x="63.5" y="58" width="173" height="32"/>
-                                <segments>
-                                    <segment title="Doctors"/>
-                                    <segment title="Customers"/>
-                                </segments>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZMd-bH-IkI">
-                                <rect key="frame" x="0.0" y="97" width="300" height="1024"/>
+                                <rect key="frame" x="0.0" y="106" width="278" height="1023"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="doctorCell" id="F1I-WH-rTS">
-                                        <rect key="frame" x="0.0" y="28" width="300" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="F1I-WH-rTS" customClass="StaffMemberTableViewCell" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="278" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F1I-WH-rTS" id="bAA-gQ-h7B">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="278" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="S2l-KV-Neh">
+                                <rect key="frame" x="0.0" y="50" width="278" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3xb-8e-c2F" firstAttribute="centerX" secondItem="Mnb-sW-SB4" secondAttribute="centerX" id="Kyc-tT-9cZ"/>
-                            <constraint firstItem="ZMd-bH-IkI" firstAttribute="leading" secondItem="Mnb-sW-SB4" secondAttribute="leading" id="bSM-Un-kHE"/>
-                            <constraint firstItem="3xb-8e-c2F" firstAttribute="top" secondItem="Mnb-sW-SB4" secondAttribute="topMargin" constant="8" id="eOH-VH-xEN"/>
-                            <constraint firstItem="ZMd-bH-IkI" firstAttribute="top" secondItem="3xb-8e-c2F" secondAttribute="bottom" constant="8" id="nxb-MM-T7Y"/>
-                            <constraint firstAttribute="bottom" secondItem="ZMd-bH-IkI" secondAttribute="bottom" id="ogq-d8-YwB"/>
-                            <constraint firstAttribute="trailing" secondItem="ZMd-bH-IkI" secondAttribute="trailing" id="zYg-kc-lfe"/>
+                            <constraint firstItem="S2l-KV-Neh" firstAttribute="leading" secondItem="16K-y1-pik" secondAttribute="leading" id="GCz-YY-6Xp"/>
+                            <constraint firstItem="ZMd-bH-IkI" firstAttribute="leading" secondItem="16K-y1-pik" secondAttribute="leading" id="JGm-Mj-xQS"/>
+                            <constraint firstItem="S2l-KV-Neh" firstAttribute="top" secondItem="16K-y1-pik" secondAttribute="top" id="KHc-YZ-XWs"/>
+                            <constraint firstItem="ZMd-bH-IkI" firstAttribute="trailing" secondItem="16K-y1-pik" secondAttribute="trailing" id="Q6Y-sv-gNj"/>
+                            <constraint firstItem="ZMd-bH-IkI" firstAttribute="bottom" secondItem="16K-y1-pik" secondAttribute="bottom" id="RI9-mB-phc"/>
+                            <constraint firstItem="ZMd-bH-IkI" firstAttribute="top" secondItem="S2l-KV-Neh" secondAttribute="bottom" id="eVg-7c-r6l"/>
+                            <constraint firstItem="S2l-KV-Neh" firstAttribute="trailing" secondItem="16K-y1-pik" secondAttribute="trailing" id="pPi-qQ-gFJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="16K-y1-pik"/>
                     </view>
                     <navigationItem key="navigationItem" id="0c0-Bi-qVk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="leo-uU-bb7">
                             <connections>
-                                <segue destination="zJJ-ZX-5pH" kind="presentation" modalPresentationStyle="pageSheet" id="pYW-ZV-Dly"/>
+                                <segue destination="jeE-6i-VgP" kind="presentation" modalPresentationStyle="pageSheet" id="pYW-ZV-Dly"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -211,9 +207,9 @@
             <objects>
                 <viewController id="mRN-fo-sLW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leQ-9y-yZs">
-                        <rect key="frame" x="0.0" y="0.0" width="526" height="1121"/>
+                        <rect key="frame" x="0.0" y="0.0" width="556" height="1129"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="EVo-iL-QHu"/>
                     </view>
                 </viewController>
@@ -221,70 +217,198 @@
             </objects>
             <point key="canvasLocation" x="1281" y="-643"/>
         </scene>
-        <!--Add Doctor-->
+        <!--Staff Member Details-->
         <scene sceneID="3h5-MR-OCn">
             <objects>
-                <viewController id="zJJ-ZX-5pH" customClass="AddDoctorViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddDoctorVC" id="zJJ-ZX-5pH" customClass="AddStaffMemberViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCe-Rg-Na3">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jgw-81-pB1">
-                                <rect key="frame" x="32" y="32" width="648" height="203.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1z-Tr-yV1">
+                                <rect key="frame" x="0.0" y="56" width="712" height="950.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyu-XB-tzI">
-                                        <rect key="frame" x="0.0" y="0.0" width="648" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor's first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhF-QQ-me0">
-                                        <rect key="frame" x="0.0" y="28.5" width="648" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-4v-URc">
-                                        <rect key="frame" x="0.0" y="70.5" width="648" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor's last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a33-Ek-GGl">
-                                        <rect key="frame" x="0.0" y="99" width="648" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-j5-k1p">
-                                        <rect key="frame" x="0.0" y="141" width="648" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V4v-ig-Bfc">
-                                        <rect key="frame" x="0.0" y="169.5" width="648" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
-                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRs-V3-KpB" userLabel="contentView">
+                                        <rect key="frame" x="32" y="32" width="648" height="824"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jgw-81-pB1">
+                                                <rect key="frame" x="0.0" y="0.0" width="648" height="792"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyu-XB-tzI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="648" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Staff member's first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhF-QQ-me0">
+                                                        <rect key="frame" x="0.0" y="36.5" width="648" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                        <connections>
+                                                            <action selector="firstNameTextEditingChanged:" destination="zJJ-ZX-5pH" eventType="editingChanged" id="Bpj-OD-a7N"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-4v-URc">
+                                                        <rect key="frame" x="0.0" y="86.5" width="648" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Staff member's last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a33-Ek-GGl">
+                                                        <rect key="frame" x="0.0" y="123" width="648" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                        <connections>
+                                                            <action selector="lastNameTextEditingChanged:" destination="zJJ-ZX-5pH" eventType="editingChanged" id="zzm-Tg-HIS"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Se-AoI">
+                                                        <rect key="frame" x="0.0" y="173" width="648" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Staff member's position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tP6-dY-q5y">
+                                                        <rect key="frame" x="0.0" y="209.5" width="648" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="positionTextEditingChanged:" destination="zJJ-ZX-5pH" eventType="editingChanged" id="qFc-QG-maD"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-j5-k1p">
+                                                        <rect key="frame" x="0.0" y="259.5" width="648" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V4v-ig-Bfc">
+                                                        <rect key="frame" x="0.0" y="296" width="648" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-ls-wMC" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="346" width="648" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Monday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-GL-woH" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="412" width="648" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Tuesday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-6s-O5k" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="478" width="648" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Wednesday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-w6-RRT" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="544" width="648" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Thursday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0a5-rE-2aQ" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="610" width="648" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Friday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GC8-Vy-RNA" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="676" width="648" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Saturday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nn4-vr-NwS" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="742" width="648" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Sunday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Jgw-81-pB1" secondAttribute="bottom" constant="32" id="7tC-mu-CVp"/>
+                                            <constraint firstItem="Jgw-81-pB1" firstAttribute="centerX" secondItem="mRs-V3-KpB" secondAttribute="centerX" id="Ejv-P7-p4N"/>
+                                            <constraint firstItem="Jgw-81-pB1" firstAttribute="top" secondItem="mRs-V3-KpB" secondAttribute="top" id="Zxf-IE-ehi"/>
+                                            <constraint firstItem="Jgw-81-pB1" firstAttribute="width" secondItem="mRs-V3-KpB" secondAttribute="width" id="eYv-a9-PB5"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="mRs-V3-KpB" firstAttribute="centerX" secondItem="P1z-Tr-yV1" secondAttribute="centerX" id="Cnw-nw-VkM"/>
+                                    <constraint firstItem="mRs-V3-KpB" firstAttribute="top" secondItem="hId-r5-atc" secondAttribute="top" constant="32" id="KPD-rn-mnH"/>
+                                    <constraint firstItem="mRs-V3-KpB" firstAttribute="leading" secondItem="hId-r5-atc" secondAttribute="leading" constant="32" id="PBU-4p-O5k"/>
+                                    <constraint firstItem="mRs-V3-KpB" firstAttribute="trailing" secondItem="hId-r5-atc" secondAttribute="trailing" constant="32" id="Vya-eQ-h3E"/>
+                                    <constraint firstAttribute="bottom" secondItem="mRs-V3-KpB" secondAttribute="bottom" id="v6H-YJ-0nh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hId-r5-atc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kPK-oq-RES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Jgw-81-pB1" firstAttribute="top" secondItem="LwL-ZG-8nq" secondAttribute="top" constant="32" id="1ns-wi-hAR"/>
-                            <constraint firstItem="LwL-ZG-8nq" firstAttribute="trailing" secondItem="Jgw-81-pB1" secondAttribute="trailing" constant="32" id="Cmy-MI-8DF"/>
-                            <constraint firstItem="Jgw-81-pB1" firstAttribute="leading" secondItem="LwL-ZG-8nq" secondAttribute="leading" constant="32" id="nOl-PO-rW4"/>
+                            <constraint firstItem="P1z-Tr-yV1" firstAttribute="top" secondItem="LwL-ZG-8nq" secondAttribute="top" id="JB1-vR-0Q0"/>
+                            <constraint firstItem="P1z-Tr-yV1" firstAttribute="bottom" secondItem="LwL-ZG-8nq" secondAttribute="bottom" id="di4-jF-wGf"/>
+                            <constraint firstItem="P1z-Tr-yV1" firstAttribute="leading" secondItem="LwL-ZG-8nq" secondAttribute="leading" id="prY-00-YcE"/>
+                            <constraint firstItem="P1z-Tr-yV1" firstAttribute="trailing" secondItem="LwL-ZG-8nq" secondAttribute="trailing" id="uQ1-eJ-aVl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LwL-ZG-8nq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Doctor" id="SIy-tA-OWs">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rud-RJ-Ckn"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nL2-su-3ew"/>
+                    <navigationItem key="navigationItem" title="Staff Member Details" id="SIy-tA-OWs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rud-RJ-Ckn">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="zJJ-ZX-5pH" id="PZd-5g-B8O"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="nL2-su-3ew">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="zJJ-ZX-5pH" id="PoV-6g-x9L"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="1200" height="1121"/>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="hhF-QQ-me0" id="ar4-wf-wdV"/>
+                        <outlet property="lastNameTextField" destination="a33-Ek-GGl" id="Seq-K2-Rg1"/>
+                        <outlet property="positionTextField" destination="tP6-dY-q5y" id="NeV-mV-FeH"/>
+                        <outlet property="stackView" destination="Jgw-81-pB1" id="jhn-OV-CkP"/>
+                        <outletCollection property="dayScheduleViews" destination="JU0-w6-RRT" collectionClass="NSMutableArray" id="gLc-nf-LnA"/>
+                        <outletCollection property="dayScheduleViews" destination="nn4-vr-NwS" collectionClass="NSMutableArray" id="trq-u3-KZV"/>
+                        <outletCollection property="dayScheduleViews" destination="GC8-Vy-RNA" collectionClass="NSMutableArray" id="a1R-BT-awK"/>
+                        <outletCollection property="dayScheduleViews" destination="0a5-rE-2aQ" collectionClass="NSMutableArray" id="rp1-qq-4gk"/>
+                        <outletCollection property="dayScheduleViews" destination="Imd-6s-O5k" collectionClass="NSMutableArray" id="xe7-6M-q96"/>
+                        <outletCollection property="dayScheduleViews" destination="9AX-GL-woH" collectionClass="NSMutableArray" id="Y6E-vw-UHB"/>
+                        <outletCollection property="dayScheduleViews" destination="bKA-ls-wMC" collectionClass="NSMutableArray" id="OK6-XY-u44"/>
+                        <segue destination="3T6-sA-94l" kind="presentation" modalPresentationStyle="pageSheet" id="ROA-uZ-Fda"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-JT-ims" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098" y="-1905"/>
+            <point key="canvasLocation" x="3783" y="-1905"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ONG-q0-l6M">
+            <objects>
+                <viewController id="3T6-sA-94l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yxr-cS-qQk">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="1109"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Pvr-gH-St5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w4H-6D-RdD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfW-De-drX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4597" y="-1890"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TQ6-l8-VZv">
@@ -292,7 +416,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pce-ub-aHg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CA8-ba-xwE">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -303,6 +427,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXV-w6-7nP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2102.1582733812952" y="-1263.0653266331658"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Djz-fG-14J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jeE-6i-VgP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZC4-EQ-5RL">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zJJ-ZX-5pH" kind="relationship" relationship="rootViewController" id="3ni-RU-ZU3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcX-6p-a5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3097.8417266187053" y="-1905.2763819095478"/>
         </scene>
     </scenes>
     <resources>

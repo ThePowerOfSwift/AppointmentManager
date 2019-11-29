@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+            <connections>
+                <outlet property="dayLabel" destination="9Ps-c1-NS3" id="nBX-LX-OSm"/>
+                <outlet property="endingHourStackView" destination="BrY-Cy-2fE" id="5tM-02-aEQ"/>
+                <outlet property="errorMessage" destination="iWA-lt-4hR" id="aVi-qY-zof"/>
+                <outlet property="stackView" destination="G1s-Qn-k4B" id="fue-DF-bdP"/>
+                <outlet property="startingHourStackView" destination="8nk-oY-48d" id="g4r-7A-CIX"/>
+                <outlet property="workingDaySwitch" destination="w9z-8H-dhX" id="FO9-Sm-lUN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="18" id="G1s-Qn-k4B">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uHA-Yo-6e6">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="118"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-c1-NS3">
+                            <rect key="frame" x="0.0" y="49" width="186" height="20.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-8H-dhX">
+                            <rect key="frame" x="186" y="43.5" width="51" height="31"/>
+                            <connections>
+                                <action selector="switchToggled:" destination="-1" eventType="valueChanged" id="aEd-ll-Fyn"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                </stackView>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nk-oY-48d" customClass="HourPickerStackView" customModule="AppointmentManager" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="0.0"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="label" value="Starting Hour"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Fnx-oI-FKY" appends="YES" id="QB5-Ol-Qxd"/>
+                    </connections>
+                </stackView>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrY-Cy-2fE" customClass="HourPickerStackView" customModule="AppointmentManager" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="0.0"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="label" value="Ending Hour"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dSH-FK-Fcp" appends="YES" id="O82-Hb-mOn"/>
+                    </connections>
+                </stackView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting hour is after the ending hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-lt-4hR">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="w9F-lL-bMh"/>
+            <point key="canvasLocation" x="3.2374100719424463" y="3.0150753768844223"/>
+        </stackView>
+        <tapGestureRecognizer id="Fnx-oI-FKY" userLabel="startingHourTapped">
+            <connections>
+                <action selector="startingHourTapped:" destination="-1" id="6nc-do-cTm"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="dSH-FK-Fcp" userLabel="endingHourTapped">
+            <connections>
+                <action selector="endingHourTapped:" destination="-1" id="zcv-Ht-J0H"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
