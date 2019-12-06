@@ -7,12 +7,12 @@ class HourPickerStackView: UIStackView {
     @IBInspectable var label: String = "Monday" {
         didSet {
             textLabel.text = label
-            
         }
     }
     
     //MARK: Elements
     fileprivate let dateFormatter = DateFormatter()
+    var isExpanded = false
     
     var selectedDate: Date = Date() {
         didSet {
@@ -25,7 +25,8 @@ class HourPickerStackView: UIStackView {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var hourLabel: UILabel!
-    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    var datepicker: UIDatePicker? = nil
     
     //MARK: Initializers
     override init(frame: CGRect) {
@@ -45,14 +46,40 @@ class HourPickerStackView: UIStackView {
         addArrangedSubview(stackView)
         self.frame = bounds
         
+        dateFormatter.dateFormat = "HH:mm"
+        selectedDate = dateFormatter.date(from: "12:00")!
+        
     }
     
-    //MARK: Actions
+    @IBAction func hourTapped(_ sender: Any) {
+        if isExpanded {
+            UIView.animate(withDuration: 0.3) {
+                self.datepicker?.isHidden = true
+            }
+            datepicker?.removeFromSuperview()
+            datepicker = nil
+            isExpanded = false
+        } else {
+            datepicker = UIDatePicker()
+            datepicker?.addTarget(self, action: #selector(datepickerValueChanged(_:)), for: .valueChanged)
+            datepicker?.datePickerMode = .time
+            datepicker?.minuteInterval = 5
+            dateFormatter.dateFormat = "HH:mm"
+            datepicker?.date = dateFormatter.date(from: "12:00")!
+            datepicker?.isHidden = true
+            stackView.addArrangedSubview(datepicker!)
+            UIView.animate(withDuration: 0.3) {
+                self.datepicker?.isHidden = false
+            }
+            isExpanded = true
+        }
+        
+    }
+}
+
+extension HourPickerStackView {
     
-    @IBAction func datepickerValueChanged(_ sender: UIDatePicker) {
-        dateFormatter.dateFormat = "HH:mm"
-        hourLabel.text = dateFormatter.string(from: sender.date)
+    @objc func datepickerValueChanged(_ sender: UIDatePicker) {
         selectedDate = sender.date
-        print("This is the selected date: \(selectedDate)")
     }
 }

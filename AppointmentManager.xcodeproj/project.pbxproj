@@ -25,7 +25,15 @@
 		B593954F23844649001B67D5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593954E23844649001B67D5 /* CloudKit.framework */; };
 		B5F411CB23800A15002185B9 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F411CA23800A15002185B9 /* DateCell.swift */; };
 		B5F411CD238067D6002185B9 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F411CC238067D6002185B9 /* DateHeader.swift */; };
-		B5F411D32380773B002185B9 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F411D22380773B002185B9 /* PersonsViewController.swift */; };
+		B5F6E0F223968CE10088CFF7 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F123968CE10088CFF7 /* CustomSplitViewController.swift */; };
+		B5F6E0F423968FA30088CFF7 /* StaffMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */; };
+		B5F6E0F6239694910088CFF7 /* StaffMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */; };
+		B5F6E0FA239908D70088CFF7 /* UITextFieldUnderlined.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */; };
+		B5F6E0FC239908F80088CFF7 /* UITextFieldUnderlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0FB239908F80088CFF7 /* UITextFieldUnderlined.swift */; };
+		B5F6E0FE239990060088CFF7 /* DayScheduleReadOnlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0FD239990060088CFF7 /* DayScheduleReadOnlyView.swift */; };
+		B5F6E100239A95A60088CFF7 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0FF239A95A60088CFF7 /* ServiceListViewController.swift */; };
+		B5F6E102239A99990088CFF7 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E101239A99990088CFF7 /* AddServiceViewController.swift */; };
+		B5F6E104239ABAD80088CFF7 /* ServiceCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E103239ABAD80088CFF7 /* ServiceCoreDataManager.swift */; };
 		B5FB448F2381C4AB0050194E /* DayScheduleStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FB448E2381C4AB0050194E /* DayScheduleStackView.xib */; };
 		B5FB44912381C5C60050194E /* DayScheduleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB44902381C5C60050194E /* DayScheduleStackView.swift */; };
 		B5FB44932381CC320050194E /* HourPickerStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FB44922381CC320050194E /* HourPickerStackView.xib */; };
@@ -56,7 +64,15 @@
 		B593954E23844649001B67D5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B5F411CA23800A15002185B9 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		B5F411CC238067D6002185B9 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
-		B5F411D22380773B002185B9 /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
+		B5F6E0F123968CE10088CFF7 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
+		B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMembersTableViewController.swift; sourceTree = "<group>"; };
+		B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMemberDetailViewController.swift; sourceTree = "<group>"; };
+		B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFieldUnderlined.xib; sourceTree = "<group>"; };
+		B5F6E0FB239908F80088CFF7 /* UITextFieldUnderlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldUnderlined.swift; sourceTree = "<group>"; };
+		B5F6E0FD239990060088CFF7 /* DayScheduleReadOnlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScheduleReadOnlyView.swift; sourceTree = "<group>"; };
+		B5F6E0FF239A95A60088CFF7 /* ServiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
+		B5F6E101239A99990088CFF7 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		B5F6E103239ABAD80088CFF7 /* ServiceCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCoreDataManager.swift; sourceTree = "<group>"; };
 		B5FB448E2381C4AB0050194E /* DayScheduleStackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayScheduleStackView.xib; sourceTree = "<group>"; };
 		B5FB44902381C5C60050194E /* DayScheduleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScheduleStackView.swift; sourceTree = "<group>"; };
 		B5FB44922381CC320050194E /* HourPickerStackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourPickerStackView.xib; sourceTree = "<group>"; };
@@ -136,6 +152,7 @@
 				B53D5269239131EB00716057 /* CoreDataManager.swift */,
 				B53D526B2391345100716057 /* StaffMemberCoreDataManager.swift */,
 				B527B326239146F500C70FBE /* WorkingDayCoreDataManager.swift */,
+				B5F6E103239ABAD80088CFF7 /* ServiceCoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,8 +181,12 @@
 			isa = PBXGroup;
 			children = (
 				B54C295C2380077600B47C9C /* CalendarViewController.swift */,
-				B5F411D22380773B002185B9 /* PersonsViewController.swift */,
 				B53D8158238083390027D613 /* AddStaffMemberViewController.swift */,
+				B5F6E0F123968CE10088CFF7 /* CustomSplitViewController.swift */,
+				B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */,
+				B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */,
+				B5F6E0FF239A95A60088CFF7 /* ServiceListViewController.swift */,
+				B5F6E101239A99990088CFF7 /* AddServiceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +199,9 @@
 				B593954723843125001B67D5 /* AddDoctorViews */,
 				B527B32A239155F200C70FBE /* StaffMemberTableViewCell.xib */,
 				B527B32C2391564500C70FBE /* StaffMemberTableViewCell.swift */,
+				B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */,
+				B5F6E0FB239908F80088CFF7 /* UITextFieldUnderlined.swift */,
+				B5F6E0FD239990060088CFF7 /* DayScheduleReadOnlyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54C29682380077B00B47C9C /* LaunchScreen.storyboard in Resources */,
+				B5F6E0FA239908D70088CFF7 /* UITextFieldUnderlined.xib in Resources */,
 				B5FB448F2381C4AB0050194E /* DayScheduleStackView.xib in Resources */,
 				B5FB44932381CC320050194E /* HourPickerStackView.xib in Resources */,
 				B54C29652380077B00B47C9C /* Assets.xcassets in Resources */,
@@ -300,16 +325,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F6E0F223968CE10088CFF7 /* CustomSplitViewController.swift in Sources */,
 				B5F411CD238067D6002185B9 /* DateHeader.swift in Sources */,
+				B5F6E104239ABAD80088CFF7 /* ServiceCoreDataManager.swift in Sources */,
 				B54C295D2380077600B47C9C /* CalendarViewController.swift in Sources */,
 				B593954523842B71001B67D5 /* Day.swift in Sources */,
 				B5F411CB23800A15002185B9 /* DateCell.swift in Sources */,
+				B5F6E0FC239908F80088CFF7 /* UITextFieldUnderlined.swift in Sources */,
 				B527B32D2391564500C70FBE /* StaffMemberTableViewCell.swift in Sources */,
 				B53D8159238083390027D613 /* AddStaffMemberViewController.swift in Sources */,
+				B5F6E102239A99990088CFF7 /* AddServiceViewController.swift in Sources */,
 				B54C29632380077600B47C9C /* AppointmentManager.xcdatamodeld in Sources */,
-				B5F411D32380773B002185B9 /* PersonsViewController.swift in Sources */,
+				B5F6E0FE239990060088CFF7 /* DayScheduleReadOnlyView.swift in Sources */,
+				B5F6E100239A95A60088CFF7 /* ServiceListViewController.swift in Sources */,
+				B5F6E0F6239694910088CFF7 /* StaffMemberDetailViewController.swift in Sources */,
 				B527B327239146F500C70FBE /* WorkingDayCoreDataManager.swift in Sources */,
 				B53D526A239131EB00716057 /* CoreDataManager.swift in Sources */,
+				B5F6E0F423968FA30088CFF7 /* StaffMembersTableViewController.swift in Sources */,
 				B54C29592380077600B47C9C /* AppDelegate.swift in Sources */,
 				B53D526C2391345100716057 /* StaffMemberCoreDataManager.swift in Sources */,
 				B5FB44912381C5C60050194E /* DayScheduleStackView.swift in Sources */,
@@ -462,6 +494,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppointmentManager/AppointmentManager.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = L8BUP5SJN2;
 				INFOPLIST_FILE = AppointmentManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -10,10 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
             <connections>
                 <outlet property="dayLabel" destination="9Ps-c1-NS3" id="nBX-LX-OSm"/>
-                <outlet property="endingHourStackView" destination="BrY-Cy-2fE" id="5tM-02-aEQ"/>
                 <outlet property="errorMessage" destination="iWA-lt-4hR" id="aVi-qY-zof"/>
                 <outlet property="stackView" destination="G1s-Qn-k4B" id="fue-DF-bdP"/>
-                <outlet property="startingHourStackView" destination="8nk-oY-48d" id="g4r-7A-CIX"/>
                 <outlet property="workingDaySwitch" destination="w9z-8H-dhX" id="FO9-Sm-lUN"/>
             </connections>
         </placeholder>
@@ -39,26 +37,6 @@
                         </switch>
                     </subviews>
                 </stackView>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nk-oY-48d" customClass="HourPickerStackView" customModule="AppointmentManager" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="235" height="0.0"/>
-                    <gestureRecognizers/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="label" value="Starting Hour"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="Fnx-oI-FKY" appends="YES" id="QB5-Ol-Qxd"/>
-                    </connections>
-                </stackView>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrY-Cy-2fE" customClass="HourPickerStackView" customModule="AppointmentManager" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="235" height="0.0"/>
-                    <gestureRecognizers/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="label" value="Ending Hour"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="dSH-FK-Fcp" appends="YES" id="O82-Hb-mOn"/>
-                    </connections>
-                </stackView>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting hour is after the ending hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-lt-4hR">
                     <rect key="frame" x="0.0" y="0.0" width="235" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -69,15 +47,5 @@
             <viewLayoutGuide key="safeArea" id="w9F-lL-bMh"/>
             <point key="canvasLocation" x="3.2374100719424463" y="3.0150753768844223"/>
         </stackView>
-        <tapGestureRecognizer id="Fnx-oI-FKY" userLabel="startingHourTapped">
-            <connections>
-                <action selector="startingHourTapped:" destination="-1" id="6nc-do-cTm"/>
-            </connections>
-        </tapGestureRecognizer>
-        <tapGestureRecognizer id="dSH-FK-Fcp" userLabel="endingHourTapped">
-            <connections>
-                <action selector="endingHourTapped:" destination="-1" id="zcv-Ht-J0H"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
 </document>

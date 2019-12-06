@@ -9,8 +9,10 @@ class CoreDataManager {
     func saveContext() {
         if managedObjectContext.hasChanges {
             do {
+                print(managedObjectContext)
                 try managedObjectContext.save()
             } catch {
+                print(error)
                 fatalError("Error while saving core data managed context: \(error.localizedDescription)")
             }
         }
