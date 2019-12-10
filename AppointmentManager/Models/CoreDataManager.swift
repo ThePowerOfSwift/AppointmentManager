@@ -7,20 +7,23 @@ class CoreDataManager {
     
     
     func saveContext() {
-        if managedObjectContext.hasChanges {
-            do {
-                print(managedObjectContext)
-                try managedObjectContext.save()
-            } catch {
-                print(error)
-                fatalError("Error while saving core data managed context: \(error.localizedDescription)")
+        managedObjectContext.perform {
+            if self.managedObjectContext.hasChanges {
+                do {
+                    print(self.managedObjectContext)
+                    try self.managedObjectContext.save()
+                } catch {
+                    print(error)
+                    fatalError("Error while saving core data managed context: \(error.localizedDescription)")
+                }
             }
         }
     }
     
     func delete(_ object: NSManagedObject)  {
-        managedObjectContext.delete(object)
-        saveContext()
+        managedObjectContext.perform {
+            self.managedObjectContext.delete(object)
+        }
     }
     
 }

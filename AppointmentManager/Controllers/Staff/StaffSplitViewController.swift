@@ -1,14 +1,6 @@
-//
-//  CustomSplitViewController.swift
-//  AppointmentManager
-//
-//  Created by Calin Jula on 03/12/2019.
-//  Copyright © 2019 Calin Jula. All rights reserved.
-//
-
 import UIKit
 
-class CustomSplitViewController: UISplitViewController {
+class StaffSplitViewController: UISplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

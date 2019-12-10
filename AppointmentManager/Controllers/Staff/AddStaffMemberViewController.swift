@@ -22,7 +22,7 @@ class AddStaffMemberViewController: UIViewController {
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -38,6 +38,8 @@ class AddStaffMemberViewController: UIViewController {
         if !textFieldsValid && !dayScheduleValid {
             createStaffMember()
         }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     func createStaffMember() {
@@ -48,9 +50,7 @@ class AddStaffMemberViewController: UIViewController {
         let workingDays = workingDayCoreDataManager.createWorkingDays(from: dayScheduleViews.filter({$0.workingDaySwitch.isOn}))
         newStaffMember.addToWorkingDays(workingDays)
         staffCoreDataManager.saveContext()
-        
-        dismiss(animated: true, completion: nil)
-        
+    
     }
     
 

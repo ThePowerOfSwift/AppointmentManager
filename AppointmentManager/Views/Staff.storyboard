@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Staff Member Detail View Controller-->
+        <scene sceneID="7pc-sB-IZB">
+            <objects>
+                <viewController storyboardIdentifier="StaffMemberDetailViewController" id="fAv-ja-L2O" customClass="StaffMemberDetailViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dBy-HP-w0n">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ndi-Gz-ZVH">
+                                <rect key="frame" x="24" y="74" width="786" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6s-Qp-QSa">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="26.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5gg-aR-DfG" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Monday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cHk-Ba-cRD" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Tuesday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qwT-YG-o63" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Wednesday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3ZP-EK-2qU" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Thursday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="08m-lD-g7v" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Friday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YSm-ay-3cf" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Saturday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-fN-mzN" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Sunday"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiM-cC-HeM">
+                                <rect key="frame" x="24" y="116.5" width="786" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-6C-iSp">
+                                <rect key="frame" x="0.0" y="143" width="834" height="1031"/>
+                                <connections>
+                                    <segue destination="V7y-C2-54e" kind="embed" identifier="ServiceListViewControllerEmbedSegue" id="vYc-ZS-3rD"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0zN-6C-iSp" firstAttribute="leading" secondItem="wcB-fX-0Lo" secondAttribute="leading" id="0IV-yl-Psl"/>
+                            <constraint firstItem="oiM-cC-HeM" firstAttribute="top" secondItem="ndi-Gz-ZVH" secondAttribute="bottom" constant="16" id="9SA-uL-xhP"/>
+                            <constraint firstItem="ndi-Gz-ZVH" firstAttribute="leading" secondItem="wcB-fX-0Lo" secondAttribute="leading" constant="24" id="Ccb-ib-GS7"/>
+                            <constraint firstItem="oiM-cC-HeM" firstAttribute="leading" secondItem="wcB-fX-0Lo" secondAttribute="leading" constant="24" id="RSL-pV-nMh"/>
+                            <constraint firstItem="wcB-fX-0Lo" firstAttribute="trailing" secondItem="ndi-Gz-ZVH" secondAttribute="trailing" constant="24" id="RaA-6S-eOI"/>
+                            <constraint firstItem="wcB-fX-0Lo" firstAttribute="bottom" secondItem="0zN-6C-iSp" secondAttribute="bottom" id="ge1-GV-n3U"/>
+                            <constraint firstItem="0zN-6C-iSp" firstAttribute="top" secondItem="oiM-cC-HeM" secondAttribute="bottom" id="ldp-ev-Xht"/>
+                            <constraint firstItem="wcB-fX-0Lo" firstAttribute="trailing" secondItem="0zN-6C-iSp" secondAttribute="trailing" id="n7f-en-BHb"/>
+                            <constraint firstItem="wcB-fX-0Lo" firstAttribute="trailing" secondItem="oiM-cC-HeM" secondAttribute="trailing" constant="24" id="oK3-wl-BHm"/>
+                            <constraint firstItem="ndi-Gz-ZVH" firstAttribute="top" secondItem="wcB-fX-0Lo" secondAttribute="top" constant="24" id="yzd-JH-qF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wcB-fX-0Lo"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="9hl-GZ-qUm"/>
+                    <connections>
+                        <outlet property="scheduleStackView" destination="ndi-Gz-ZVH" id="PVm-bV-24q"/>
+                        <outletCollection property="dayScheduleStackViews" destination="5gg-aR-DfG" collectionClass="NSMutableArray" id="aXS-AR-qho"/>
+                        <outletCollection property="dayScheduleStackViews" destination="cHk-Ba-cRD" collectionClass="NSMutableArray" id="7Cw-72-uDk"/>
+                        <outletCollection property="dayScheduleStackViews" destination="qwT-YG-o63" collectionClass="NSMutableArray" id="oJm-iO-TyL"/>
+                        <outletCollection property="dayScheduleStackViews" destination="3ZP-EK-2qU" collectionClass="NSMutableArray" id="N2H-wa-xKM"/>
+                        <outletCollection property="dayScheduleStackViews" destination="08m-lD-g7v" collectionClass="NSMutableArray" id="ooF-FC-yhI"/>
+                        <outletCollection property="dayScheduleStackViews" destination="YSm-ay-3cf" collectionClass="NSMutableArray" id="cZS-i7-kaq"/>
+                        <outletCollection property="dayScheduleStackViews" destination="m0p-fN-mzN" collectionClass="NSMutableArray" id="uK6-Z8-hcy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZt-gs-hSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903.5971223021584" y="-173.36683417085428"/>
+        </scene>
+        <!--Staff Members-->
+        <scene sceneID="Kxl-Uz-SHr">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="8Ye-D9-ga5" customClass="StaffMembersTableViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Nq-up-Z6c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="LtT-aw-LIj">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="staffMemberCell" id="uSf-J5-Q5M" customClass="StaffMemberTableViewCell" customModule="AppointmentManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uSf-J5-Q5M" id="2Xq-Xl-GBw">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Ye-D9-ga5" id="XhT-Dp-ngq"/>
+                            <outlet property="delegate" destination="8Ye-D9-ga5" id="7D1-Lc-o94"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Staff Members" id="ff6-hB-tzQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5SO-0f-4GS">
+                            <connections>
+                                <segue destination="OXB-gm-357" kind="presentation" modalPresentationStyle="fullScreen" id="jUd-MC-JQV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="LtT-aw-LIj" id="UTI-jf-zHq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPE-qS-zWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="-1028"/>
+        </scene>
+        <!--Use Existing Service View Controller-->
+        <scene sceneID="aiw-0k-dRQ">
+            <objects>
+                <viewController id="nwt-Zv-Zc8" customClass="UseExistingServiceViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqb-U2-nQh">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-Pc-gFm">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="56"/>
+                                <items>
+                                    <navigationItem title="Use existing service" id="n3T-NX-CNy">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Yc8-G8-m2i">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="nwt-Zv-Zc8" id="FXt-bE-6cv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xez-B9-R0u">
+                                            <connections>
+                                                <action selector="doneButtonTapped:" destination="nwt-Zv-Zc8" id="hs5-Qu-4V9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="h9W-wb-GfV">
+                                <rect key="frame" x="0.0" y="56" width="540" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mrk-9v-w0R">
+                                <rect key="frame" x="0.0" y="112" width="540" height="508"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceCell" textLabel="ne0-AJ-D4X" detailTextLabel="dy6-Uw-N7M" style="IBUITableViewCellStyleValue1" id="bOE-XI-RxB">
+                                        <rect key="frame" x="0.0" y="28" width="540" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bOE-XI-RxB" id="0Se-AA-NjE">
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ne0-AJ-D4X">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dy6-Uw-N7M">
+                                                    <rect key="frame" x="481" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E3j-cc-9Yo" firstAttribute="bottom" secondItem="Mrk-9v-w0R" secondAttribute="bottom" id="64b-PE-VBj"/>
+                            <constraint firstAttribute="trailing" secondItem="nDY-Pc-gFm" secondAttribute="trailing" id="99o-aA-H9r"/>
+                            <constraint firstItem="nDY-Pc-gFm" firstAttribute="leading" secondItem="E3j-cc-9Yo" secondAttribute="leading" id="EWY-dR-V33"/>
+                            <constraint firstItem="h9W-wb-GfV" firstAttribute="trailing" secondItem="E3j-cc-9Yo" secondAttribute="trailing" id="Fe6-7P-0qh"/>
+                            <constraint firstItem="Mrk-9v-w0R" firstAttribute="leading" secondItem="E3j-cc-9Yo" secondAttribute="leading" id="OQH-Wv-Uv7"/>
+                            <constraint firstItem="h9W-wb-GfV" firstAttribute="top" secondItem="nDY-Pc-gFm" secondAttribute="bottom" id="P9P-yy-43r"/>
+                            <constraint firstItem="nDY-Pc-gFm" firstAttribute="top" secondItem="E3j-cc-9Yo" secondAttribute="top" id="g5d-nd-kau"/>
+                            <constraint firstItem="E3j-cc-9Yo" firstAttribute="trailing" secondItem="Mrk-9v-w0R" secondAttribute="trailing" id="geu-eh-a5s"/>
+                            <constraint firstItem="h9W-wb-GfV" firstAttribute="leading" secondItem="E3j-cc-9Yo" secondAttribute="leading" id="hCa-FE-yKO"/>
+                            <constraint firstItem="Mrk-9v-w0R" firstAttribute="top" secondItem="h9W-wb-GfV" secondAttribute="bottom" id="zMm-pL-i5h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E3j-cc-9Yo"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="h9W-wb-GfV" id="wJ5-hr-f5f"/>
+                        <outlet property="tableView" destination="Mrk-9v-w0R" id="z1w-8I-yat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTi-0p-2ba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3318" y="-724"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9fV-7J-I2B">
+            <objects>
+                <navigationController id="pIm-b3-kBC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQJ-Xt-Ho5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Ye-D9-ga5" kind="relationship" relationship="rootViewController" id="Zez-qx-yhd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZt-uh-h7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="-1028"/>
+        </scene>
+        <!--Staff-->
+        <scene sceneID="MJh-YE-rP0">
+            <objects>
+                <splitViewController storyboardIdentifier="StaffSplitViewController" title="Staff" id="0od-9Z-riy" customClass="StaffSplitViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Staff" image="person" catalog="system" id="2FC-NT-efd"/>
+                    <connections>
+                        <segue destination="pIm-b3-kBC" kind="relationship" relationship="masterViewController" id="Tpv-uK-IfK"/>
+                        <segue destination="99R-qt-ueY" kind="relationship" relationship="detailViewController" id="9c5-jA-BJN"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6d-7J-XJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="-427"/>
+        </scene>
+        <!--Add Staff Member-->
+        <scene sceneID="g2Y-Cw-4iQ">
+            <objects>
+                <viewController storyboardIdentifier="AddDoctorVC" id="OXB-gm-357" customClass="AddStaffMemberViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y3l-4z-Xh6">
+                        <rect key="frame" x="0.0" y="0.0" width="1200" height="1121"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usl-sT-yZ3">
+                                <rect key="frame" x="0.0" y="0.0" width="1200" height="50"/>
+                                <items>
+                                    <navigationItem title="Add Staff Member" id="5xs-uw-n9R">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xeY-YW-CJs">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="OXB-gm-357" id="zHk-VN-0c0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Zm2-zZ-sUN">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="OXB-gm-357" id="fst-Ja-flc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMF-X3-MIa">
+                                <rect key="frame" x="0.0" y="50" width="1200" height="1051"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sW6-Dt-rZl" userLabel="contentView">
+                                        <rect key="frame" x="32" y="32" width="1136" height="737.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OfB-BN-5y7">
+                                                <rect key="frame" x="0.0" y="0.0" width="1136" height="705.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-Kf-6wq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1136" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Staff member's first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-PK-vDN">
+                                                        <rect key="frame" x="0.0" y="36.5" width="1136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                        <connections>
+                                                            <action selector="textFieldEditingChanged:" destination="OXB-gm-357" eventType="editingChanged" id="rC8-Ab-9kL"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtQ-CL-cVO">
+                                                        <rect key="frame" x="0.0" y="86.5" width="1136" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Staff member's last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvi-1h-52u">
+                                                        <rect key="frame" x="0.0" y="123" width="1136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                        <connections>
+                                                            <action selector="textFieldEditingChanged:" destination="OXB-gm-357" eventType="editingChanged" id="8SA-Z7-Bqz"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txP-WD-S8E">
+                                                        <rect key="frame" x="0.0" y="173" width="1136" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Staff member's position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psu-Sb-nCW">
+                                                        <rect key="frame" x="0.0" y="209.5" width="1136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="textFieldEditingChanged:" destination="OXB-gm-357" eventType="editingChanged" id="GZv-Yh-E46"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdL-gL-1Ii" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="259.5" width="1136" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Monday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Oj-lE-TIf" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="325.5" width="1136" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Tuesday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-MH-6gu" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="391.5" width="1136" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Wednesday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-IX-s2a" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="457.5" width="1136" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Thursday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mVw-ru-w6c" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="523.5" width="1136" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Friday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Hy-hK-AqZ" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="589.5" width="1136" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Saturday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qwx-zw-ifm" customClass="DayScheduleStackView" customModule="AppointmentManager" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="655.5" width="1136" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="day" value="Sunday"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="OfB-BN-5y7" firstAttribute="top" secondItem="sW6-Dt-rZl" secondAttribute="top" id="0NF-tI-CT4"/>
+                                            <constraint firstItem="OfB-BN-5y7" firstAttribute="width" secondItem="sW6-Dt-rZl" secondAttribute="width" id="Eta-2b-MyI"/>
+                                            <constraint firstAttribute="bottom" secondItem="OfB-BN-5y7" secondAttribute="bottom" constant="32" id="jP3-L3-rYF"/>
+                                            <constraint firstItem="OfB-BN-5y7" firstAttribute="centerX" secondItem="sW6-Dt-rZl" secondAttribute="centerX" id="l9f-as-xaG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sW6-Dt-rZl" firstAttribute="trailing" secondItem="JsJ-dv-nT6" secondAttribute="trailing" constant="32" id="6Fe-nh-7RH"/>
+                                    <constraint firstItem="sW6-Dt-rZl" firstAttribute="leading" secondItem="JsJ-dv-nT6" secondAttribute="leading" constant="32" id="XaZ-2y-oqL"/>
+                                    <constraint firstAttribute="bottom" secondItem="sW6-Dt-rZl" secondAttribute="bottom" id="jmG-OD-W4P"/>
+                                    <constraint firstItem="sW6-Dt-rZl" firstAttribute="top" secondItem="JsJ-dv-nT6" secondAttribute="top" constant="32" id="sWH-q8-p7o"/>
+                                    <constraint firstItem="sW6-Dt-rZl" firstAttribute="centerX" secondItem="yMF-X3-MIa" secondAttribute="centerX" id="zbf-73-0h6"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="JsJ-dv-nT6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5gP-WY-4Kj"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yMF-X3-MIa" firstAttribute="bottom" secondItem="CXb-Dm-VyC" secondAttribute="bottom" id="GCP-Yx-l6J"/>
+                            <constraint firstItem="Usl-sT-yZ3" firstAttribute="top" secondItem="CXb-Dm-VyC" secondAttribute="top" id="GWl-Uf-Uma"/>
+                            <constraint firstItem="yMF-X3-MIa" firstAttribute="leading" secondItem="CXb-Dm-VyC" secondAttribute="leading" id="OEf-mO-SnY"/>
+                            <constraint firstItem="Usl-sT-yZ3" firstAttribute="leading" secondItem="CXb-Dm-VyC" secondAttribute="leading" id="Tad-hl-W8L"/>
+                            <constraint firstItem="yMF-X3-MIa" firstAttribute="trailing" secondItem="CXb-Dm-VyC" secondAttribute="trailing" id="XJg-mR-VFy"/>
+                            <constraint firstItem="yMF-X3-MIa" firstAttribute="top" secondItem="Usl-sT-yZ3" secondAttribute="bottom" id="qhn-PB-I4N"/>
+                            <constraint firstItem="Usl-sT-yZ3" firstAttribute="trailing" secondItem="CXb-Dm-VyC" secondAttribute="trailing" id="tcy-di-ULR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CXb-Dm-VyC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Staff Member" id="Oax-bD-hXZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hgG-hs-8uq">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="OXB-gm-357" id="LF5-pv-2uN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h0k-T0-SI9">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="OXB-gm-357" id="utM-Mn-TTj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="1200" height="1121"/>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="6MW-PK-vDN" id="s8J-mM-S3k"/>
+                        <outlet property="lastNameTextField" destination="rvi-1h-52u" id="qOs-5B-Tk1"/>
+                        <outlet property="positionTextField" destination="psu-Sb-nCW" id="Kem-nq-JTu"/>
+                        <outlet property="stackView" destination="OfB-BN-5y7" id="kYZ-Me-VxV"/>
+                        <outletCollection property="dayScheduleViews" destination="PHA-IX-s2a" collectionClass="NSMutableArray" id="DH9-hZ-gaE"/>
+                        <outletCollection property="dayScheduleViews" destination="qwx-zw-ifm" collectionClass="NSMutableArray" id="fuZ-3z-Fgy"/>
+                        <outletCollection property="dayScheduleViews" destination="5Hy-hK-AqZ" collectionClass="NSMutableArray" id="hpR-Qs-jct"/>
+                        <outletCollection property="dayScheduleViews" destination="mVw-ru-w6c" collectionClass="NSMutableArray" id="52i-ug-T0C"/>
+                        <outletCollection property="dayScheduleViews" destination="y7m-MH-6gu" collectionClass="NSMutableArray" id="s7i-yr-gEn"/>
+                        <outletCollection property="dayScheduleViews" destination="1Oj-lE-TIf" collectionClass="NSMutableArray" id="UtP-p3-ifI"/>
+                        <outletCollection property="dayScheduleViews" destination="LdL-gL-1Ii" collectionClass="NSMutableArray" id="bQO-24-0pp"/>
+                        <outletCollection property="textFields" destination="6MW-PK-vDN" collectionClass="NSMutableArray" id="9Mt-fz-9xP"/>
+                        <outletCollection property="textFields" destination="rvi-1h-52u" collectionClass="NSMutableArray" id="2HT-XR-ld0"/>
+                        <outletCollection property="textFields" destination="psu-Sb-nCW" collectionClass="NSMutableArray" id="8jJ-wd-eHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFG-1n-nn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2858" y="-1536"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ber-Zl-bDN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="99R-qt-ueY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hQd-5i-TWN">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fAv-ja-L2O" kind="relationship" relationship="rootViewController" id="hnH-GP-6Mp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6o-3Z-tvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149.6402877697842" y="-173.36683417085428"/>
+        </scene>
+        <!--Service List View Controller-->
+        <scene sceneID="w8g-Ui-owT">
+            <objects>
+                <viewController id="V7y-C2-54e" customClass="ServiceListViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UU3-DW-HGy">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1031"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60D-nf-rXt">
+                                <rect key="frame" x="24" y="978" width="146" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Add Service" image="plus.circle.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addServiceButtonTapped:" destination="V7y-C2-54e" eventType="touchUpInside" id="uyk-dC-VnK"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-JY-Z7d">
+                                <rect key="frame" x="8" y="0.0" width="818" height="970"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceCell" textLabel="8US-Xt-Ug2" detailTextLabel="T9N-oC-Iku" style="IBUITableViewCellStyleValue1" id="7Fu-ba-RzY">
+                                        <rect key="frame" x="0.0" y="28" width="818" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Fu-ba-RzY" id="JIL-hb-JOx">
+                                            <rect key="frame" x="0.0" y="0.0" width="818" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8US-Xt-Ug2">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T9N-oC-Iku">
+                                                    <rect key="frame" x="744" y="12" width="59" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U6d-JY-Z7d" firstAttribute="leading" secondItem="FQC-Cl-etd" secondAttribute="leading" constant="8" id="0zT-Yi-dXd"/>
+                            <constraint firstAttribute="bottom" secondItem="60D-nf-rXt" secondAttribute="bottom" constant="24" id="6xb-8Z-DCk"/>
+                            <constraint firstItem="60D-nf-rXt" firstAttribute="leading" secondItem="UU3-DW-HGy" secondAttribute="leading" constant="24" id="VAK-vA-TXI"/>
+                            <constraint firstItem="60D-nf-rXt" firstAttribute="top" secondItem="U6d-JY-Z7d" secondAttribute="bottom" constant="8" id="VNA-s3-AiM"/>
+                            <constraint firstItem="U6d-JY-Z7d" firstAttribute="trailing" secondItem="FQC-Cl-etd" secondAttribute="trailing" constant="-8" id="tMZ-uO-6tg"/>
+                            <constraint firstItem="U6d-JY-Z7d" firstAttribute="top" secondItem="UU3-DW-HGy" secondAttribute="topMargin" id="zZi-Ef-cDa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FQC-Cl-etd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="U6d-JY-Z7d" id="Zup-PS-CrC"/>
+                        <segue destination="1CJ-dr-taD" kind="presentation" identifier="AddServiceModalSegue" modalPresentationStyle="formSheet" id="Jkp-Ge-UMe"/>
+                        <segue destination="nwt-Zv-Zc8" kind="presentation" identifier="UseExistingServiceSegue" modalPresentationStyle="formSheet" id="GUd-cW-oKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JX9-E0-u7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.9784172661871" y="-151.25628140703517"/>
+        </scene>
+        <!--Add Service-->
+        <scene sceneID="sUw-rA-a2V">
+            <objects>
+                <viewController id="1CJ-dr-taD" customClass="AddServiceViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ooL-v2-2k2">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-bs-0Fz">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="56"/>
+                                <items>
+                                    <navigationItem title="Add Service" id="hjP-qO-2qT">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6MD-dL-Y9X">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="1CJ-dr-taD" id="DoP-NU-djI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wdT-ye-Sj5">
+                                            <connections>
+                                                <action selector="doneButtonTapped:" destination="1CJ-dr-taD" id="ESm-7C-OB6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5as-I3-gcB">
+                                <rect key="frame" x="20" y="76" width="500" height="133"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V00-9Z-FFl">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaY-iu-lHO">
+                                        <rect key="frame" x="0.0" y="28.5" width="500" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5N-s9-KIA">
+                                        <rect key="frame" x="0.0" y="70.5" width="100" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zDE-6I-jgZ">
+                                        <rect key="frame" x="0.0" y="99" width="500" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKU-9L-PQf">
+                                                <rect key="frame" x="0.0" y="0.0" width="459" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ly-o8-OME">
+                                                <rect key="frame" x="467" y="0.0" width="33" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must enter a name and a price for this service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-YF-KEV">
+                                        <rect key="frame" x="0.0" y="133" width="382" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zDE-6I-jgZ" secondAttribute="trailing" id="Gz5-uT-eRv"/>
+                                    <constraint firstItem="zDE-6I-jgZ" firstAttribute="leading" secondItem="5as-I3-gcB" secondAttribute="leading" id="MNn-E5-oke"/>
+                                    <constraint firstItem="oaY-iu-lHO" firstAttribute="leading" secondItem="5as-I3-gcB" secondAttribute="leading" id="iK0-XH-BZ3"/>
+                                    <constraint firstAttribute="trailing" secondItem="oaY-iu-lHO" secondAttribute="trailing" id="ugY-xK-Sdo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xD2-Zv-vrP" firstAttribute="trailing" secondItem="oRP-bs-0Fz" secondAttribute="trailing" id="BZO-ES-D3N"/>
+                            <constraint firstItem="oRP-bs-0Fz" firstAttribute="top" secondItem="ooL-v2-2k2" secondAttribute="top" id="MIG-cI-GqA"/>
+                            <constraint firstItem="xD2-Zv-vrP" firstAttribute="trailing" secondItem="5as-I3-gcB" secondAttribute="trailing" constant="20" id="OmX-eS-vy3"/>
+                            <constraint firstItem="oRP-bs-0Fz" firstAttribute="leading" secondItem="ooL-v2-2k2" secondAttribute="leading" id="hao-s9-IbN"/>
+                            <constraint firstItem="5as-I3-gcB" firstAttribute="top" secondItem="oRP-bs-0Fz" secondAttribute="bottom" constant="20" id="ik7-1Y-DKT"/>
+                            <constraint firstItem="5as-I3-gcB" firstAttribute="leading" secondItem="xD2-Zv-vrP" secondAttribute="leading" constant="20" id="rAV-iL-vyz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xD2-Zv-vrP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Service" id="0oi-6G-dYE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uhQ-ox-qzt">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="1CJ-dr-taD" id="zkR-rP-3u3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7ac-cZ-jRg">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="1CJ-dr-taD" id="tnr-w7-RRp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currencyLabel" destination="4ly-o8-OME" id="c0O-qD-RuN"/>
+                        <outlet property="errorLabel" destination="pPd-YF-KEV" id="PLX-hK-qM1"/>
+                        <outlet property="serviceNameTextField" destination="oaY-iu-lHO" id="HPD-VR-wt1"/>
+                        <outlet property="servicePriceTextField" destination="fKU-9L-PQf" id="YGM-GO-hOM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RN9-lx-gBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3318" y="-151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

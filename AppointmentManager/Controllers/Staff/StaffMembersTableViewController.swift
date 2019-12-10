@@ -3,8 +3,11 @@ import CoreData
 
 class StaffMembersTableViewController: UITableViewController {
     
+    //MARK: Outlets
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
+    //MARK: Fetched results controller
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<StaffMember> = {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         context.automaticallyMergesChangesFromParent = true
@@ -19,16 +22,17 @@ class StaffMembersTableViewController: UITableViewController {
     }()
     
     
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "StaffMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "staffMemberCell")
         searchBar.delegate = self
         try! fetchedResultsController.performFetch()
+        navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
 }
 
-//MARK: UITableViewController overrides
+//MARK: Data source overrides
 extension StaffMembersTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,17 +48,16 @@ extension StaffMembersTableViewController {
         
         let staffMember = fetchedResultsController.object(at: indexPath)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "staffMemberCell", for: indexPath) as! StaffMemberTableViewCell
-        cell.configureCell(for: staffMember)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "staffMemberCell", for: indexPath)
+        cell.textLabel?.text = (staffMember.firstName ?? "") + " " + (staffMember.lastName ?? "")
+        cell.detailTextLabel?.text = staffMember.position
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { suggestedActions in
-            return self.makeContextMenu(for: indexPath)
-        }
-    }
+}
+
+//MARK: Table actions
+extension StaffMembersTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "StaffMemberDetailViewController") as! StaffMemberDetailViewController
@@ -63,10 +66,21 @@ extension StaffMembersTableViewController {
         splitViewController?.showDetailViewController(navigationController, sender: nil)
         
     }
-    
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, complete) in
+            let staffMemberCoreDataManager = StaffMemberCoreDataManager()
+            staffMemberCoreDataManager.delete(self.fetchedResultsController.object(at: indexPath))
+            staffMemberCoreDataManager.saveContext()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+        
+    }
 }
 
-//MARK: NSFetchedResultsControllerDelegate methods
+//MARK: Fetched results controller delegate
 extension StaffMembersTableViewController: NSFetchedResultsControllerDelegate {
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
@@ -83,7 +97,9 @@ extension StaffMembersTableViewController: NSFetchedResultsControllerDelegate {
             break
         case .update:
             if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) {
-                (cell as! StaffMemberTableViewCell).configureCell(for: fetchedResultsController.object(at: indexPath))
+                let staffMember = fetchedResultsController.object(at: indexPath)
+                cell.textLabel?.text = (staffMember.firstName ?? "") + " " + (staffMember.lastName ?? "")
+                cell.detailTextLabel?.text = staffMember.position
             }
             break;
         default:
@@ -96,35 +112,19 @@ extension StaffMembersTableViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
-//MARK: Context menus
-extension StaffMembersTableViewController {
-    
-    func makeContextMenu(for indexPath: IndexPath) -> UIMenu {
-        
-        let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { action in
-            let staffMemberManager = StaffMemberCoreDataManager()
-            staffMemberManager.delete(staffMember: self.fetchedResultsController.object(at: indexPath))
-            staffMemberManager.saveContext()
-        }
-        
-        return UIMenu(title: "", children: [delete])
-    }
-}
-
+//MARK: Search bar delegate
 extension StaffMembersTableViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if !(searchBar.text?.isEmpty ?? true) {
-            
-            let firstAndLast = NSPredicate(format: "firstName = %@ AND lastName = %@", searchBar.text ?? "")
-            let firstNamePredicate = NSPredicate(format: "firstName = %@", searchBar.text ?? "")
-            let lastNamePredicate = NSPredicate(format: "lastName = %@", searchBar.text ?? "")
-            
-            let orPredicate = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.or, subpredicates: [firstAndLast,firstNamePredicate, lastNamePredicate])
-            
-            fetchedResultsController.fetchRequest.predicate = orPredicate
-        } else {
+        if searchText.isEmpty {
             fetchedResultsController.fetchRequest.predicate = nil
+        } else {
+            let firstNamePredicate = NSPredicate(format: "firstName BEGINSWITH[cd] %@", searchText)
+            let lastNamePredicate = NSPredicate(format: "lastName BEGINSWITH[cd] %@", searchText)
+            let splittedWords = searchText.split(separator: " ")
+            
+            let compoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [firstNamePredicate, lastNamePredicate])
+            fetchedResultsController.fetchRequest.predicate = compoundPredicate
         }
         
         try! fetchedResultsController.performFetch()

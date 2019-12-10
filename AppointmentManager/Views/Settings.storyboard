@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="hSF-A6-V9L">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="3uo-o3-AyS" customClass="SettingsViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUl-Ei-yjy">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-dW-wCG">
+                                <rect key="frame" x="20" y="20" width="794" height="69"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="530" translatesAutoresizingMaskIntoConstraints="NO" id="p6c-eU-CGc">
+                                        <rect key="frame" x="0.0" y="0.0" width="794" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Customers consent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyT-I0-U44">
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMY-ym-YQ6">
+                                                <rect key="frame" x="745" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="608" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-lY-17F">
+                                        <rect key="frame" x="0.0" y="39" width="794" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your privacy policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26y-Wk-0lz">
+                                                <rect key="frame" x="0.0" y="0.0" width="144.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXy-8V-xL9">
+                                                <rect key="frame" x="752.5" y="0.0" width="41.5" height="30"/>
+                                                <state key="normal" title="None"/>
+                                                <connections>
+                                                    <action selector="privacyPolicyButtonPressed:" destination="3uo-o3-AyS" eventType="touchUpInside" id="3E2-0S-2Nt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3N2-Nz-C03" firstAttribute="trailing" secondItem="DSJ-dW-wCG" secondAttribute="trailing" constant="20" id="1xF-Gd-rI9"/>
+                            <constraint firstItem="DSJ-dW-wCG" firstAttribute="top" secondItem="3N2-Nz-C03" secondAttribute="top" constant="20" id="bVA-10-8vY"/>
+                            <constraint firstItem="DSJ-dW-wCG" firstAttribute="leading" secondItem="3N2-Nz-C03" secondAttribute="leading" constant="20" id="eWp-hh-pEh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3N2-Nz-C03"/>
+                    </view>
+                    <connections>
+                        <outlet property="privacyPolicyButton" destination="hXy-8V-xL9" id="k8e-f2-HUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQL-lv-IHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="261"/>
+        </scene>
+    </scenes>
+</document>

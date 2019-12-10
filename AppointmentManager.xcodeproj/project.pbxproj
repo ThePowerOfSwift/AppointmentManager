@@ -8,24 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		356B52AE89F20942031710F5 /* Pods_AppointmentManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3422974CD480260834EE53 /* Pods_AppointmentManager.framework */; };
+		B505874F239BC308002D2785 /* UseExistingServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505874E239BC308002D2785 /* UseExistingServiceViewController.swift */; };
+		B5058751239D2A93002D2785 /* Staff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5058750239D2A93002D2785 /* Staff.storyboard */; };
+		B5058753239D2B4C002D2785 /* Customers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5058752239D2B4C002D2785 /* Customers.storyboard */; };
+		B5058755239D2C76002D2785 /* CustomersSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5058754239D2C76002D2785 /* CustomersSplitViewController.swift */; };
+		B5058758239D335E002D2785 /* AddCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5058757239D335E002D2785 /* AddCustomerViewController.swift */; };
 		B527B327239146F500C70FBE /* WorkingDayCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527B326239146F500C70FBE /* WorkingDayCoreDataManager.swift */; };
-		B527B32B239155F200C70FBE /* StaffMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B527B32A239155F200C70FBE /* StaffMemberTableViewCell.xib */; };
-		B527B32D2391564500C70FBE /* StaffMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527B32C2391564500C70FBE /* StaffMemberTableViewCell.swift */; };
 		B53D526A239131EB00716057 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D5269239131EB00716057 /* CoreDataManager.swift */; };
 		B53D526C2391345100716057 /* StaffMemberCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D526B2391345100716057 /* StaffMemberCoreDataManager.swift */; };
 		B53D8159238083390027D613 /* AddStaffMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D8158238083390027D613 /* AddStaffMemberViewController.swift */; };
 		B54C29592380077600B47C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C29582380077600B47C9C /* AppDelegate.swift */; };
 		B54C295B2380077600B47C9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C295A2380077600B47C9C /* SceneDelegate.swift */; };
-		B54C295D2380077600B47C9C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C295C2380077600B47C9C /* CalendarViewController.swift */; };
 		B54C29602380077600B47C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54C295E2380077600B47C9C /* Main.storyboard */; };
 		B54C29632380077600B47C9C /* AppointmentManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B54C29612380077600B47C9C /* AppointmentManager.xcdatamodeld */; };
 		B54C29652380077B00B47C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54C29642380077B00B47C9C /* Assets.xcassets */; };
 		B54C29682380077B00B47C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54C29662380077B00B47C9C /* LaunchScreen.storyboard */; };
+		B567CE6D239FCBA20067C7B1 /* CustomerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE6C239FCBA20067C7B1 /* CustomerCoreDataManager.swift */; };
+		B567CE6F239FD07A0067C7B1 /* CustomersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE6E239FD07A0067C7B1 /* CustomersTableViewController.swift */; };
+		B567CE75239FD6270067C7B1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B567CE74239FD6270067C7B1 /* Settings.storyboard */; };
+		B567CE77239FD7CC0067C7B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE76239FD7CC0067C7B1 /* SettingsViewController.swift */; };
+		B567CE79239FE2B30067C7B1 /* SignPrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE78239FE2B30067C7B1 /* SignPrivacyPolicyViewController.swift */; };
+		B567CE81239FF76A0067C7B1 /* DrawingGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE80239FF76A0067C7B1 /* DrawingGestureRecognizer.swift */; };
+		B567CE83239FF8660067C7B1 /* PDFDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE82239FF8660067C7B1 /* PDFDrawer.swift */; };
+		B567CE85239FF9540067C7B1 /* NonSelectablePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE84239FF9540067C7B1 /* NonSelectablePDFView.swift */; };
 		B593954523842B71001B67D5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593954423842B71001B67D5 /* Day.swift */; };
 		B593954F23844649001B67D5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593954E23844649001B67D5 /* CloudKit.framework */; };
-		B5F411CB23800A15002185B9 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F411CA23800A15002185B9 /* DateCell.swift */; };
-		B5F411CD238067D6002185B9 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F411CC238067D6002185B9 /* DateHeader.swift */; };
-		B5F6E0F223968CE10088CFF7 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F123968CE10088CFF7 /* CustomSplitViewController.swift */; };
+		B5F6E0F223968CE10088CFF7 /* StaffSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F123968CE10088CFF7 /* StaffSplitViewController.swift */; };
 		B5F6E0F423968FA30088CFF7 /* StaffMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */; };
 		B5F6E0F6239694910088CFF7 /* StaffMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */; };
 		B5F6E0FA239908D70088CFF7 /* UITextFieldUnderlined.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */; };
@@ -44,27 +52,35 @@
 		0D3422974CD480260834EE53 /* Pods_AppointmentManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppointmentManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		771666E569DE4DB40CC3FD1C /* Pods-AppointmentManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppointmentManager.debug.xcconfig"; path = "Target Support Files/Pods-AppointmentManager/Pods-AppointmentManager.debug.xcconfig"; sourceTree = "<group>"; };
 		8C7717F5C5F7025CDF60E644 /* Pods-AppointmentManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppointmentManager.release.xcconfig"; path = "Target Support Files/Pods-AppointmentManager/Pods-AppointmentManager.release.xcconfig"; sourceTree = "<group>"; };
+		B505874E239BC308002D2785 /* UseExistingServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseExistingServiceViewController.swift; sourceTree = "<group>"; };
+		B5058750239D2A93002D2785 /* Staff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Staff.storyboard; sourceTree = "<group>"; };
+		B5058752239D2B4C002D2785 /* Customers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customers.storyboard; sourceTree = "<group>"; };
+		B5058754239D2C76002D2785 /* CustomersSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersSplitViewController.swift; sourceTree = "<group>"; };
+		B5058757239D335E002D2785 /* AddCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerViewController.swift; sourceTree = "<group>"; };
 		B527B326239146F500C70FBE /* WorkingDayCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDayCoreDataManager.swift; sourceTree = "<group>"; };
-		B527B32A239155F200C70FBE /* StaffMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaffMemberTableViewCell.xib; sourceTree = "<group>"; };
-		B527B32C2391564500C70FBE /* StaffMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMemberTableViewCell.swift; sourceTree = "<group>"; };
 		B53D5269239131EB00716057 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B53D526B2391345100716057 /* StaffMemberCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMemberCoreDataManager.swift; sourceTree = "<group>"; };
 		B53D8158238083390027D613 /* AddStaffMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStaffMemberViewController.swift; sourceTree = "<group>"; };
 		B54C29552380077600B47C9C /* AppointmentManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppointmentManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54C29582380077600B47C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B54C295A2380077600B47C9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B54C295C2380077600B47C9C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B54C295F2380077600B47C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B54C29622380077600B47C9C /* AppointmentManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppointmentManager.xcdatamodel; sourceTree = "<group>"; };
 		B54C29642380077B00B47C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54C29672380077B00B47C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54C29692380077B00B47C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B567CE6C239FCBA20067C7B1 /* CustomerCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCoreDataManager.swift; sourceTree = "<group>"; };
+		B567CE6E239FD07A0067C7B1 /* CustomersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersTableViewController.swift; sourceTree = "<group>"; };
+		B567CE74239FD6270067C7B1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		B567CE76239FD7CC0067C7B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B567CE78239FE2B30067C7B1 /* SignPrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		B567CE80239FF76A0067C7B1 /* DrawingGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingGestureRecognizer.swift; sourceTree = "<group>"; };
+		B567CE82239FF8660067C7B1 /* PDFDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDrawer.swift; sourceTree = "<group>"; };
+		B567CE84239FF9540067C7B1 /* NonSelectablePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonSelectablePDFView.swift; sourceTree = "<group>"; };
 		B593954423842B71001B67D5 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		B593954D23844644001B67D5 /* AppointmentManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppointmentManager.entitlements; sourceTree = "<group>"; };
 		B593954E23844649001B67D5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		B5F411CA23800A15002185B9 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
-		B5F411CC238067D6002185B9 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
-		B5F6E0F123968CE10088CFF7 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
+		B5F6E0F123968CE10088CFF7 /* StaffSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffSplitViewController.swift; sourceTree = "<group>"; };
 		B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMembersTableViewController.swift; sourceTree = "<group>"; };
 		B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMemberDetailViewController.swift; sourceTree = "<group>"; };
 		B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFieldUnderlined.xib; sourceTree = "<group>"; };
@@ -110,6 +126,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5058756239D2C8B002D2785 /* Staff */ = {
+			isa = PBXGroup;
+			children = (
+				B53D8158238083390027D613 /* AddStaffMemberViewController.swift */,
+				B5F6E0F123968CE10088CFF7 /* StaffSplitViewController.swift */,
+				B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */,
+				B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */,
+				B5F6E0FF239A95A60088CFF7 /* ServiceListViewController.swift */,
+				B5F6E101239A99990088CFF7 /* AddServiceViewController.swift */,
+				B505874E239BC308002D2785 /* UseExistingServiceViewController.swift */,
+			);
+			path = Staff;
+			sourceTree = "<group>";
+		};
+		B5058759239D336F002D2785 /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				B5058754239D2C76002D2785 /* CustomersSplitViewController.swift */,
+				B5058757239D335E002D2785 /* AddCustomerViewController.swift */,
+				B567CE6E239FD07A0067C7B1 /* CustomersTableViewController.swift */,
+				B567CE78239FE2B30067C7B1 /* SignPrivacyPolicyViewController.swift */,
+			);
+			path = Customers;
+			sourceTree = "<group>";
+		};
 		B54C294C2380077600B47C9C = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +186,16 @@
 			path = AppointmentManager;
 			sourceTree = "<group>";
 		};
+		B567CE8623A0016F0067C7B1 /* PDFSigning */ = {
+			isa = PBXGroup;
+			children = (
+				B567CE80239FF76A0067C7B1 /* DrawingGestureRecognizer.swift */,
+				B567CE82239FF8660067C7B1 /* PDFDrawer.swift */,
+				B567CE84239FF9540067C7B1 /* NonSelectablePDFView.swift */,
+			);
+			path = PDFSigning;
+			sourceTree = "<group>";
+		};
 		B593954623842B95001B67D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +204,7 @@
 				B53D526B2391345100716057 /* StaffMemberCoreDataManager.swift */,
 				B527B326239146F500C70FBE /* WorkingDayCoreDataManager.swift */,
 				B5F6E103239ABAD80088CFF7 /* ServiceCoreDataManager.swift */,
+				B567CE6C239FCBA20067C7B1 /* CustomerCoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,8 +223,6 @@
 		B59395482384313A001B67D5 /* CalendarViews */ = {
 			isa = PBXGroup;
 			children = (
-				B5F411CA23800A15002185B9 /* DateCell.swift */,
-				B5F411CC238067D6002185B9 /* DateHeader.swift */,
 			);
 			path = CalendarViews;
 			sourceTree = "<group>";
@@ -180,13 +230,10 @@
 		B5F411CE238068E9002185B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B54C295C2380077600B47C9C /* CalendarViewController.swift */,
-				B53D8158238083390027D613 /* AddStaffMemberViewController.swift */,
-				B5F6E0F123968CE10088CFF7 /* CustomSplitViewController.swift */,
-				B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */,
-				B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */,
-				B5F6E0FF239A95A60088CFF7 /* ServiceListViewController.swift */,
-				B5F6E101239A99990088CFF7 /* AddServiceViewController.swift */,
+				B567CE8623A0016F0067C7B1 /* PDFSigning */,
+				B5058756239D2C8B002D2785 /* Staff */,
+				B5058759239D336F002D2785 /* Customers */,
+				B567CE76239FD7CC0067C7B1 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,10 +242,11 @@
 			isa = PBXGroup;
 			children = (
 				B54C295E2380077600B47C9C /* Main.storyboard */,
+				B5058750239D2A93002D2785 /* Staff.storyboard */,
+				B5058752239D2B4C002D2785 /* Customers.storyboard */,
+				B567CE74239FD6270067C7B1 /* Settings.storyboard */,
 				B59395482384313A001B67D5 /* CalendarViews */,
 				B593954723843125001B67D5 /* AddDoctorViews */,
-				B527B32A239155F200C70FBE /* StaffMemberTableViewCell.xib */,
-				B527B32C2391564500C70FBE /* StaffMemberTableViewCell.swift */,
 				B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */,
 				B5F6E0FB239908F80088CFF7 /* UITextFieldUnderlined.swift */,
 				B5F6E0FD239990060088CFF7 /* DayScheduleReadOnlyView.swift */,
@@ -269,9 +317,11 @@
 				B54C29682380077B00B47C9C /* LaunchScreen.storyboard in Resources */,
 				B5F6E0FA239908D70088CFF7 /* UITextFieldUnderlined.xib in Resources */,
 				B5FB448F2381C4AB0050194E /* DayScheduleStackView.xib in Resources */,
+				B5058753239D2B4C002D2785 /* Customers.storyboard in Resources */,
+				B5058751239D2A93002D2785 /* Staff.storyboard in Resources */,
 				B5FB44932381CC320050194E /* HourPickerStackView.xib in Resources */,
+				B567CE75239FD6270067C7B1 /* Settings.storyboard in Resources */,
 				B54C29652380077B00B47C9C /* Assets.xcassets in Resources */,
-				B527B32B239155F200C70FBE /* StaffMemberTableViewCell.xib in Resources */,
 				B54C29602380077600B47C9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,28 +375,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5F6E0F223968CE10088CFF7 /* CustomSplitViewController.swift in Sources */,
-				B5F411CD238067D6002185B9 /* DateHeader.swift in Sources */,
+				B5F6E0F223968CE10088CFF7 /* StaffSplitViewController.swift in Sources */,
 				B5F6E104239ABAD80088CFF7 /* ServiceCoreDataManager.swift in Sources */,
-				B54C295D2380077600B47C9C /* CalendarViewController.swift in Sources */,
+				B567CE79239FE2B30067C7B1 /* SignPrivacyPolicyViewController.swift in Sources */,
+				B567CE6D239FCBA20067C7B1 /* CustomerCoreDataManager.swift in Sources */,
 				B593954523842B71001B67D5 /* Day.swift in Sources */,
-				B5F411CB23800A15002185B9 /* DateCell.swift in Sources */,
+				B567CE85239FF9540067C7B1 /* NonSelectablePDFView.swift in Sources */,
 				B5F6E0FC239908F80088CFF7 /* UITextFieldUnderlined.swift in Sources */,
-				B527B32D2391564500C70FBE /* StaffMemberTableViewCell.swift in Sources */,
+				B567CE81239FF76A0067C7B1 /* DrawingGestureRecognizer.swift in Sources */,
 				B53D8159238083390027D613 /* AddStaffMemberViewController.swift in Sources */,
 				B5F6E102239A99990088CFF7 /* AddServiceViewController.swift in Sources */,
 				B54C29632380077600B47C9C /* AppointmentManager.xcdatamodeld in Sources */,
 				B5F6E0FE239990060088CFF7 /* DayScheduleReadOnlyView.swift in Sources */,
+				B5058755239D2C76002D2785 /* CustomersSplitViewController.swift in Sources */,
 				B5F6E100239A95A60088CFF7 /* ServiceListViewController.swift in Sources */,
 				B5F6E0F6239694910088CFF7 /* StaffMemberDetailViewController.swift in Sources */,
+				B5058758239D335E002D2785 /* AddCustomerViewController.swift in Sources */,
+				B567CE83239FF8660067C7B1 /* PDFDrawer.swift in Sources */,
+				B567CE6F239FD07A0067C7B1 /* CustomersTableViewController.swift in Sources */,
 				B527B327239146F500C70FBE /* WorkingDayCoreDataManager.swift in Sources */,
 				B53D526A239131EB00716057 /* CoreDataManager.swift in Sources */,
+				B505874F239BC308002D2785 /* UseExistingServiceViewController.swift in Sources */,
 				B5F6E0F423968FA30088CFF7 /* StaffMembersTableViewController.swift in Sources */,
 				B54C29592380077600B47C9C /* AppDelegate.swift in Sources */,
 				B53D526C2391345100716057 /* StaffMemberCoreDataManager.swift in Sources */,
 				B5FB44912381C5C60050194E /* DayScheduleStackView.swift in Sources */,
 				B5FB44952381CCB20050194E /* HourPickerStackView.swift in Sources */,
 				B54C295B2380077600B47C9C /* SceneDelegate.swift in Sources */,
+				B567CE77239FD7CC0067C7B1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

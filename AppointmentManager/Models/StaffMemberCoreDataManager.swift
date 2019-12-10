@@ -23,6 +23,7 @@ class StaffMemberCoreDataManager: CoreDataManager {
         }
     }
     
+    
     func deleteAllWorkingDays(from staffMember: StaffMember) {
         guard let workingDays = staffMember.workingDays as? Set<WorkingDay> else { return }
         workingDays.forEach {

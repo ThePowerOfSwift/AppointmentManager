@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B2106" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="privacyPolicy" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
     <entity name="Service" representedClassName="Service" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -20,8 +26,9 @@
         <relationship name="staffMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StaffMember" inverseName="workingDays" inverseEntity="StaffMember"/>
     </entity>
     <elements>
+        <element name="Service" positionX="-63" positionY="36" width="128" height="88"/>
         <element name="StaffMember" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="WorkingDay" positionX="-54" positionY="18" width="128" height="103"/>
-        <element name="Service" positionX="-63" positionY="36" width="128" height="88"/>
+        <element name="Customer" positionX="-45" positionY="45" width="128" height="103"/>
     </elements>
 </model>
