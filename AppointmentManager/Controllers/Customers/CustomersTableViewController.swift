@@ -19,8 +19,18 @@ class CustomersTableViewController: UITableViewController {
         super.viewDidLoad()
         fetchedResultsController.delegate = self
         try? fetchedResultsController.performFetch()
-        
         navigationItem.leftBarButtonItem = self.editButtonItem
+        configureDetailView()
+    }
+    
+    func configureDetailView() {
+        guard let customers = fetchedResultsController.fetchedObjects else { return }
+        if customers.count > 0 {
+            tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+            tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .none)
+        } else {
+            splitViewController?.viewControllers.last?.view.isHidden = true
+        }
     }
 }
 
@@ -44,6 +54,7 @@ extension CustomersTableViewController {
 
 }
 
+//MARK: Table actions
 extension CustomersTableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -52,9 +63,17 @@ extension CustomersTableViewController {
             customerCoreDataManager.delete(self.fetchedResultsController.object(at: indexPath))
             customerCoreDataManager.saveContext()
             complete(true)
+            
         }
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let customerDetailVc = storyboard?.instantiateViewController(withIdentifier: "CustomerDetailsViewController") as! CustomerDetailsViewController
+        customerDetailVc.customer = fetchedResultsController.object(at: indexPath)
+        let navigationVc = UINavigationController(rootViewController: customerDetailVc)
+        splitViewController?.showDetailViewController(navigationVc, sender: self)
     }
 }
 
@@ -71,6 +90,7 @@ extension CustomersTableViewController: NSFetchedResultsControllerDelegate {
             case .delete:
                 if let deletedIndexPath = indexPath {
                     self.tableView.deleteRows(at: [deletedIndexPath], with: .automatic)
+                    configureDetailView()
                 }
                 break
             default:

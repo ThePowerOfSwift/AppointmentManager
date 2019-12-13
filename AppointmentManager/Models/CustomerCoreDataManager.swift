@@ -9,6 +9,16 @@ class CustomerCoreDataManager: CoreDataManager {
             customer.lastName = lastName
             customer.phoneNumber = phoneNumber
             customer.privacyPolicy = privacy
+            customer.signedPrivacyPolicyDate = Date()
+            try? self.managedObjectContext.save()
+        }
+    }
+    
+    func update(customer: Customer, firstName: String, lastName: String, phoneNumber: String) {
+        managedObjectContext.perform {
+            customer.firstName = firstName
+            customer.lastName = lastName
+            customer.phoneNumber = phoneNumber
             try? self.managedObjectContext.save()
         }
     }

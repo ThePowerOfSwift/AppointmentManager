@@ -11,9 +11,9 @@ class DayScheduleStackView: UIStackView {
     var startingHourStackView: HourPickerStackView? = nil
     var endingHourStackView: HourPickerStackView? = nil
     
-    @IBInspectable var day: String = "" {
+    @IBInspectable var day: Int = 1 {
         didSet {
-            dayLabel.text = day
+            dayLabel.text = Day.dayDictionary[day]
             selectedDay = Day(rawValue: day) ?? .monday
         }
     }

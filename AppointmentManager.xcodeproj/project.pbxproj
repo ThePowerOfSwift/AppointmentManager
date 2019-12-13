@@ -17,6 +17,12 @@
 		B53D526A239131EB00716057 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D5269239131EB00716057 /* CoreDataManager.swift */; };
 		B53D526C2391345100716057 /* StaffMemberCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D526B2391345100716057 /* StaffMemberCoreDataManager.swift */; };
 		B53D8159238083390027D613 /* AddStaffMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D8158238083390027D613 /* AddStaffMemberViewController.swift */; };
+		B543B1A123A2410B0033B55A /* CustomerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543B1A023A2410B0033B55A /* CustomerDetailsViewController.swift */; };
+		B543B1A323A241CD0033B55A /* ShowPrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543B1A223A241CD0033B55A /* ShowPrivacyPolicyViewController.swift */; };
+		B543B1A523A271150033B55A /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B543B1A423A271150033B55A /* Calendar.storyboard */; };
+		B543B1A723A277B10033B55A /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543B1A623A277B10033B55A /* DateCell.swift */; };
+		B543B1A923A2782B0033B55A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543B1A823A2782B0033B55A /* CalendarViewController.swift */; };
+		B543B1AB23A2957C0033B55A /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543B1AA23A2957C0033B55A /* DateHeader.swift */; };
 		B54C29592380077600B47C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C29582380077600B47C9C /* AppDelegate.swift */; };
 		B54C295B2380077600B47C9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C295A2380077600B47C9C /* SceneDelegate.swift */; };
 		B54C29602380077600B47C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54C295E2380077600B47C9C /* Main.storyboard */; };
@@ -33,6 +39,9 @@
 		B567CE85239FF9540067C7B1 /* NonSelectablePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567CE84239FF9540067C7B1 /* NonSelectablePDFView.swift */; };
 		B593954523842B71001B67D5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593954423842B71001B67D5 /* Day.swift */; };
 		B593954F23844649001B67D5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593954E23844649001B67D5 /* CloudKit.framework */; };
+		B5CBD04A23A3A7BC00A0B6C5 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBD04923A3A7BC00A0B6C5 /* DayViewController.swift */; };
+		B5CBD04C23A3B1CB00A0B6C5 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBD04B23A3B1CB00A0B6C5 /* DayTableViewCell.swift */; };
+		B5CBD04E23A3D5B000A0B6C5 /* DayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBD04D23A3D5B000A0B6C5 /* DayUtils.swift */; };
 		B5F6E0F223968CE10088CFF7 /* StaffSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F123968CE10088CFF7 /* StaffSplitViewController.swift */; };
 		B5F6E0F423968FA30088CFF7 /* StaffMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */; };
 		B5F6E0F6239694910088CFF7 /* StaffMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */; };
@@ -61,6 +70,12 @@
 		B53D5269239131EB00716057 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B53D526B2391345100716057 /* StaffMemberCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMemberCoreDataManager.swift; sourceTree = "<group>"; };
 		B53D8158238083390027D613 /* AddStaffMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStaffMemberViewController.swift; sourceTree = "<group>"; };
+		B543B1A023A2410B0033B55A /* CustomerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailsViewController.swift; sourceTree = "<group>"; };
+		B543B1A223A241CD0033B55A /* ShowPrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		B543B1A423A271150033B55A /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		B543B1A623A277B10033B55A /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		B543B1A823A2782B0033B55A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B543B1AA23A2957C0033B55A /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 		B54C29552380077600B47C9C /* AppointmentManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppointmentManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54C29582380077600B47C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B54C295A2380077600B47C9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +95,9 @@
 		B593954423842B71001B67D5 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		B593954D23844644001B67D5 /* AppointmentManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppointmentManager.entitlements; sourceTree = "<group>"; };
 		B593954E23844649001B67D5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B5CBD04923A3A7BC00A0B6C5 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		B5CBD04B23A3B1CB00A0B6C5 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		B5CBD04D23A3D5B000A0B6C5 /* DayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayUtils.swift; sourceTree = "<group>"; };
 		B5F6E0F123968CE10088CFF7 /* StaffSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffSplitViewController.swift; sourceTree = "<group>"; };
 		B5F6E0F323968FA30088CFF7 /* StaffMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMembersTableViewController.swift; sourceTree = "<group>"; };
 		B5F6E0F5239694910088CFF7 /* StaffMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMemberDetailViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +165,8 @@
 				B5058757239D335E002D2785 /* AddCustomerViewController.swift */,
 				B567CE6E239FD07A0067C7B1 /* CustomersTableViewController.swift */,
 				B567CE78239FE2B30067C7B1 /* SignPrivacyPolicyViewController.swift */,
+				B543B1A023A2410B0033B55A /* CustomerDetailsViewController.swift */,
+				B543B1A223A241CD0033B55A /* ShowPrivacyPolicyViewController.swift */,
 			);
 			path = Customers;
 			sourceTree = "<group>";
@@ -205,6 +225,7 @@
 				B527B326239146F500C70FBE /* WorkingDayCoreDataManager.swift */,
 				B5F6E103239ABAD80088CFF7 /* ServiceCoreDataManager.swift */,
 				B567CE6C239FCBA20067C7B1 /* CustomerCoreDataManager.swift */,
+				B5CBD04D23A3D5B000A0B6C5 /* DayUtils.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +244,9 @@
 		B59395482384313A001B67D5 /* CalendarViews */ = {
 			isa = PBXGroup;
 			children = (
+				B543B1A623A277B10033B55A /* DateCell.swift */,
+				B543B1AA23A2957C0033B55A /* DateHeader.swift */,
+				B5CBD04B23A3B1CB00A0B6C5 /* DayTableViewCell.swift */,
 			);
 			path = CalendarViews;
 			sourceTree = "<group>";
@@ -234,6 +258,8 @@
 				B5058756239D2C8B002D2785 /* Staff */,
 				B5058759239D336F002D2785 /* Customers */,
 				B567CE76239FD7CC0067C7B1 /* SettingsViewController.swift */,
+				B543B1A823A2782B0033B55A /* CalendarViewController.swift */,
+				B5CBD04923A3A7BC00A0B6C5 /* DayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +271,7 @@
 				B5058750239D2A93002D2785 /* Staff.storyboard */,
 				B5058752239D2B4C002D2785 /* Customers.storyboard */,
 				B567CE74239FD6270067C7B1 /* Settings.storyboard */,
+				B543B1A423A271150033B55A /* Calendar.storyboard */,
 				B59395482384313A001B67D5 /* CalendarViews */,
 				B593954723843125001B67D5 /* AddDoctorViews */,
 				B5F6E0F9239908D70088CFF7 /* UITextFieldUnderlined.xib */,
@@ -322,6 +349,7 @@
 				B5FB44932381CC320050194E /* HourPickerStackView.xib in Resources */,
 				B567CE75239FD6270067C7B1 /* Settings.storyboard in Resources */,
 				B54C29652380077B00B47C9C /* Assets.xcassets in Resources */,
+				B543B1A523A271150033B55A /* Calendar.storyboard in Resources */,
 				B54C29602380077600B47C9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,13 +410,20 @@
 				B593954523842B71001B67D5 /* Day.swift in Sources */,
 				B567CE85239FF9540067C7B1 /* NonSelectablePDFView.swift in Sources */,
 				B5F6E0FC239908F80088CFF7 /* UITextFieldUnderlined.swift in Sources */,
+				B5CBD04C23A3B1CB00A0B6C5 /* DayTableViewCell.swift in Sources */,
+				B5CBD04E23A3D5B000A0B6C5 /* DayUtils.swift in Sources */,
 				B567CE81239FF76A0067C7B1 /* DrawingGestureRecognizer.swift in Sources */,
 				B53D8159238083390027D613 /* AddStaffMemberViewController.swift in Sources */,
+				B543B1AB23A2957C0033B55A /* DateHeader.swift in Sources */,
 				B5F6E102239A99990088CFF7 /* AddServiceViewController.swift in Sources */,
+				B543B1A323A241CD0033B55A /* ShowPrivacyPolicyViewController.swift in Sources */,
 				B54C29632380077600B47C9C /* AppointmentManager.xcdatamodeld in Sources */,
+				B543B1A123A2410B0033B55A /* CustomerDetailsViewController.swift in Sources */,
 				B5F6E0FE239990060088CFF7 /* DayScheduleReadOnlyView.swift in Sources */,
 				B5058755239D2C76002D2785 /* CustomersSplitViewController.swift in Sources */,
 				B5F6E100239A95A60088CFF7 /* ServiceListViewController.swift in Sources */,
+				B5CBD04A23A3A7BC00A0B6C5 /* DayViewController.swift in Sources */,
+				B543B1A923A2782B0033B55A /* CalendarViewController.swift in Sources */,
 				B5F6E0F6239694910088CFF7 /* StaffMemberDetailViewController.swift in Sources */,
 				B5058758239D335E002D2785 /* AddCustomerViewController.swift in Sources */,
 				B567CE83239FF8660067C7B1 /* PDFDrawer.swift in Sources */,
@@ -396,6 +431,7 @@
 				B527B327239146F500C70FBE /* WorkingDayCoreDataManager.swift in Sources */,
 				B53D526A239131EB00716057 /* CoreDataManager.swift in Sources */,
 				B505874F239BC308002D2785 /* UseExistingServiceViewController.swift in Sources */,
+				B543B1A723A277B10033B55A /* DateCell.swift in Sources */,
 				B5F6E0F423968FA30088CFF7 /* StaffMembersTableViewController.swift in Sources */,
 				B54C29592380077600B47C9C /* AppDelegate.swift in Sources */,
 				B53D526C2391345100716057 /* StaffMemberCoreDataManager.swift in Sources */,

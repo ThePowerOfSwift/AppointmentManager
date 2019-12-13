@@ -58,7 +58,7 @@ class StaffMemberDetailViewController: UIViewController {
         if editing {
             if let workingDays = staffMember?.workingDays as? Set<WorkingDay> {
                 for workingDay in workingDays {
-                    let view = dayScheduleStackViews.first(where: {$0.selectedDay == Day(rawValue: workingDay.day ?? "Monday")})
+                    let view = dayScheduleStackViews.first(where: {$0.selectedDay.rawValue == Int(workingDay.day)})
                     view?.configureView(startingDate: workingDay.startingHour ?? Date(), endingDate: workingDay.endingHour ?? Date())
                 }
             }
@@ -84,8 +84,7 @@ class StaffMemberDetailViewController: UIViewController {
         
         
         for workingDay in workingDaysArray.sorted(by: { (firstDay, secondDay) -> Bool in
-            let allDays = Day.allCases.map({$0.rawValue})
-            return allDays.firstIndex(of: firstDay.day!) ?? 7 < allDays.firstIndex(of: secondDay.day!) ?? 7
+            return firstDay.day < secondDay.day
         }) {
             let horizontalStackView = DayScheduleReadOnlyView()
             horizontalStackView.workingDay = workingDay

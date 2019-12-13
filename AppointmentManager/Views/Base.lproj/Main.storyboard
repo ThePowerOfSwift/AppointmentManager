@@ -19,6 +19,7 @@
                         <segue destination="u02-Nz-RLu" kind="relationship" relationship="viewControllers" id="V4t-D9-8GK"/>
                         <segue destination="omM-aA-2eG" kind="relationship" relationship="viewControllers" id="UNH-8v-ksT"/>
                         <segue destination="iWm-OD-gsp" kind="relationship" relationship="viewControllers" id="tz4-68-rDv"/>
+                        <segue destination="tC3-uW-nRy" kind="relationship" relationship="viewControllers" id="swd-al-Ow2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vff-gq-XRl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,14 +50,25 @@
         <scene sceneID="is3-f0-qDS">
             <objects>
                 <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="iWm-OD-gsp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SH3-Zt-4tU"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="SH3-Zt-4tU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sba-iQ-nSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48" y="-408"/>
         </scene>
+        <!--CalendarViewController-->
+        <scene sceneID="b06-NR-7Op">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CalendarViewController" storyboardName="Calendar" referencedIdentifier="CalendarViewController" id="tC3-uW-nRy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="bFl-zK-f5I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsO-9g-Vhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-299"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.3" catalog="system" width="72" height="35"/>
     </resources>

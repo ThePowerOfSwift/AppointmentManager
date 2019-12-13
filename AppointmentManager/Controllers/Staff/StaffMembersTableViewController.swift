@@ -73,6 +73,7 @@ extension StaffMembersTableViewController {
             let staffMemberCoreDataManager = StaffMemberCoreDataManager()
             staffMemberCoreDataManager.delete(self.fetchedResultsController.object(at: indexPath))
             staffMemberCoreDataManager.saveContext()
+            complete(true)
         }
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
@@ -121,7 +122,6 @@ extension StaffMembersTableViewController: UISearchBarDelegate {
         } else {
             let firstNamePredicate = NSPredicate(format: "firstName BEGINSWITH[cd] %@", searchText)
             let lastNamePredicate = NSPredicate(format: "lastName BEGINSWITH[cd] %@", searchText)
-            let splittedWords = searchText.split(separator: " ")
             
             let compoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [firstNamePredicate, lastNamePredicate])
             fetchedResultsController.fetchRequest.predicate = compoundPredicate

@@ -1,6 +1,6 @@
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,13 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("PrivacyPolicy.pdf")
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("PrivacyPolicy.pdf", isDirectory: false)
         do {
-            try FileManager.default.copyItem(at: url, to: path)
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: path.path) {
+                try fileManager.removeItem(at: path)
+            }
+            try FileManager.default.moveItem(at: url, to: path)
             privacyPolicyButton.titleLabel?.text = "Added"
         } catch {
             fatalError("Failed to copy file at path")

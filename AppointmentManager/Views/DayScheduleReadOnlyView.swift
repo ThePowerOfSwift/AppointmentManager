@@ -5,7 +5,7 @@ class DayScheduleReadOnlyView: UIStackView {
     var workingDay: WorkingDay? = nil {
         didSet {
             guard let settedWorkingDay = workingDay else { return }
-            _ = addLabel(text: settedWorkingDay.day ?? "")
+            _ = addLabel(text: Day.dayDictionary[Int(settedWorkingDay.day)] ?? "")
             let schedule = generateDayScheduleHours(from: settedWorkingDay)
             addLabel(text: schedule).textAlignment = .right 
         }
