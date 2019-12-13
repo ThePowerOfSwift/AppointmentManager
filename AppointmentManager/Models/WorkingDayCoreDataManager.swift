@@ -14,8 +14,8 @@ class WorkingDayCoreDataManager: CoreDataManager {
     func createWorkingDay(from dayScheduleView: DayScheduleStackView) -> WorkingDay {
         let workingDay = WorkingDay(context: managedObjectContext)
         workingDay.day = Int16(dayScheduleView.day)
-        workingDay.startingHour = dayScheduleView.startingHourStackView?.selectedDate
-        workingDay.endingHour = dayScheduleView.endingHourStackView?.selectedDate
+        workingDay.startingTime = dayScheduleView.startingHourStackView?.selectedTime
+        workingDay.endingTime = dayScheduleView.endingHourStackView?.selectedTime
         return workingDay
     }
 }

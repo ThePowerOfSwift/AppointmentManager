@@ -22,8 +22,8 @@
     </entity>
     <entity name="WorkingDay" representedClassName="WorkingDay" syncable="YES" codeGenerationType="class">
         <attribute name="day" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="endingHour" attributeType="Date" defaultDateTimeInterval="595870200" usesScalarValueType="NO"/>
-        <attribute name="startingHour" attributeType="Date" defaultDateTimeInterval="595870200" usesScalarValueType="NO"/>
+        <attribute name="endingTime" attributeType="String" defaultValueString="19/11/2019, 17:30"/>
+        <attribute name="startingTime" attributeType="String" defaultValueString="19/11/2019, 17:30"/>
         <relationship name="staffMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StaffMember" inverseName="workingDays" inverseEntity="StaffMember"/>
     </entity>
     <elements>

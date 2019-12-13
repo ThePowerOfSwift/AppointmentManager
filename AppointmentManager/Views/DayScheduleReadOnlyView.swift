@@ -33,12 +33,12 @@ class DayScheduleReadOnlyView: UIStackView {
         var startingHourText = ""
         var endingHourText = ""
         
-        if let startingHour = workingDay.startingHour {
-            startingHourText = dateFormatter.string(from: startingHour)
+        if let startingHour = workingDay.startingTime {
+            startingHourText = startingHour
         }
         
-        if let endingHour = workingDay.endingHour {
-            endingHourText = dateFormatter.string(from: endingHour)
+        if let endingHour = workingDay.endingTime {
+            endingHourText = endingHour
         }
         
         return startingHourText + " - " + endingHourText

@@ -61,7 +61,7 @@ class DayScheduleStackView: UIStackView {
     }
     
     var viewIsValid: Bool {
-        return startingHourStackView?.selectedDate.compare(endingHourStackView!.selectedDate) == .orderedAscending
+        return startingHourStackView?.selectedTime.compare(endingHourStackView!.selectedTime) == .orderedAscending
     }
     
     func validateView() -> Bool {
@@ -76,7 +76,7 @@ class DayScheduleStackView: UIStackView {
     }
     
     
-    func configureView(startingDate: Date, endingDate: Date) {
+    func configureView(startingDate: String, endingDate: String) {
         
         workingDaySwitch.isOn = true
 
@@ -90,7 +90,7 @@ class DayScheduleStackView: UIStackView {
                     stackView.addArrangedSubview(endingHourStackView!)
         }
     
-        startingHourStackView!.selectedDate = startingDate
-        endingHourStackView!.selectedDate = endingDate
+        startingHourStackView!.selectedTime = startingDate
+        endingHourStackView!.selectedTime = endingDate
     }
 }

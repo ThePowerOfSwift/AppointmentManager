@@ -18,8 +18,10 @@ class DayUtils {
         let days = staffMember.workingDays as? Set<WorkingDay>
         let dayOfWeek = Calendar.current.component(.weekday, from: date)
         let workingDay = days?.filter({$0.day == dayOfWeek}).first
-        let startingHour = Calendar.current.component(.hour, from: workingDay!.startingHour!)
-        let endingHour = Calendar.current.component(.hour, from: workingDay!.endingHour!)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let startingHour = Calendar.current.component(.hour, from: dateFormatter.date(from: workingDay!.startingTime!)!)
+        let endingHour = Calendar.current.component(.hour, from: dateFormatter.date(from: workingDay!.endingTime!)!)
         
         let dateInterval = DateInterval(start: Calendar.current.date(bySettingHour: startingHour, minute: 0, second: 0, of: date)!, end: Calendar.current.date(bySettingHour: endingHour, minute: 0, second: 0, of: date)!)
         return dateInterval

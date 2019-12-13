@@ -59,7 +59,7 @@ class StaffMemberDetailViewController: UIViewController {
             if let workingDays = staffMember?.workingDays as? Set<WorkingDay> {
                 for workingDay in workingDays {
                     let view = dayScheduleStackViews.first(where: {$0.selectedDay.rawValue == Int(workingDay.day)})
-                    view?.configureView(startingDate: workingDay.startingHour ?? Date(), endingDate: workingDay.endingHour ?? Date())
+                    view?.configureView(startingDate: workingDay.startingTime ?? "12:00", endingDate: workingDay.endingTime ?? "12:00")
                 }
             }
         } else {

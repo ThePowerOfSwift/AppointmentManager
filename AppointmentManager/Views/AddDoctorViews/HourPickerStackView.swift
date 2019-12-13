@@ -14,10 +14,9 @@ class HourPickerStackView: UIStackView {
     fileprivate let dateFormatter = DateFormatter()
     var isExpanded = false
     
-    var selectedDate: Date = Date() {
+    var selectedTime: String = "12:00" {
         didSet {
-            dateFormatter.dateFormat = "HH:mm"
-            hourLabel.text = dateFormatter.string(from: selectedDate)
+            hourLabel.text = selectedTime
         }
     }
     
@@ -45,9 +44,6 @@ class HourPickerStackView: UIStackView {
         bundle.loadNibNamed("HourPickerStackView", owner: self, options: nil)
         addArrangedSubview(stackView)
         self.frame = bounds
-        
-        dateFormatter.dateFormat = "HH:mm"
-        selectedDate = dateFormatter.date(from: "12:00")!
         
     }
     
@@ -80,6 +76,7 @@ class HourPickerStackView: UIStackView {
 extension HourPickerStackView {
     
     @objc func datepickerValueChanged(_ sender: UIDatePicker) {
-        selectedDate = sender.date
+        dateFormatter.dateFormat = "HH:mm"
+        selectedTime = dateFormatter.string(from: sender.date)
     }
 }
