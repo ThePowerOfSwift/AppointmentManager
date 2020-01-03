@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-5a-98J">
-                                <rect key="frame" x="0.0" y="671" width="1024" height="630"/>
+                                <rect key="frame" x="0.0" y="670.5" width="1024" height="630.5"/>
                                 <connections>
                                     <segue destination="zF8-P9-qRN" kind="embed" identifier="DayDetailsSegue" id="723-oh-GwC"/>
                                 </connections>
@@ -173,7 +173,7 @@
             <objects>
                 <viewController id="zF8-P9-qRN" customClass="DayViewController" customModule="AppointmentManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IFH-u5-8mW">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="630"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="630.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26 Jul 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-KM-TjM">
@@ -183,7 +183,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g5g-oo-iA7">
-                                <rect key="frame" x="20" y="32" width="984" height="598"/>
+                                <rect key="frame" x="20" y="32" width="984" height="598.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" id="umc-lS-w7G" customClass="DayTableViewCell" customModule="AppointmentManager" customModuleProvider="target">
@@ -229,15 +229,100 @@
                             <constraint firstItem="qfh-KM-TjM" firstAttribute="top" secondItem="IFH-u5-8mW" secondAttribute="topMargin" id="kyQ-Ml-Eld"/>
                             <constraint firstItem="g5g-oo-iA7" firstAttribute="leading" secondItem="IFH-u5-8mW" secondAttribute="leadingMargin" id="ogI-eR-iDr"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="kUB-rI-k8V"/>
                     </view>
                     <connections>
                         <outlet property="dayLabel" destination="qfh-KM-TjM" id="A8E-ae-ziP"/>
                         <outlet property="tableView" destination="g5g-oo-iA7" id="W5G-ik-g11"/>
+                        <segue destination="g9a-gx-jI1" kind="presentation" identifier="PresentNewAppointmentSegue" modalPresentationStyle="pageSheet" id="qTs-I5-yp4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yE-4g-kIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77" y="667"/>
+        </scene>
+        <!--New Appointment-->
+        <scene sceneID="83b-eP-GdU">
+            <objects>
+                <viewController id="xIy-qy-C8P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="saE-Zj-vU6">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="590.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-eo-Lil">
+                                <rect key="frame" x="20" y="76" width="672" height="190"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTe-0o-GxW">
+                                        <rect key="frame" x="0.0" y="0.0" width="672" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26 Jul 2019 (10:00 - 10:15)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnG-RP-C6j">
+                                        <rect key="frame" x="0.0" y="28.5" width="672" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staff member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBr-99-FPv">
+                                        <rect key="frame" x="0.0" y="57" width="672" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to add staff member" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiy-5q-jUj">
+                                        <rect key="frame" x="0.0" y="85.5" width="672" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i44-1d-5Oc">
+                                        <rect key="frame" x="0.0" y="127.5" width="672" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to add client" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVR-4U-KNu">
+                                        <rect key="frame" x="0.0" y="156" width="672" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VqU-eo-Lil" firstAttribute="top" secondItem="XUS-AK-WOX" secondAttribute="top" constant="20" id="8YN-B7-fJS"/>
+                            <constraint firstItem="VqU-eo-Lil" firstAttribute="leading" secondItem="XUS-AK-WOX" secondAttribute="leading" constant="20" id="9Z0-8r-hke"/>
+                            <constraint firstItem="XUS-AK-WOX" firstAttribute="trailing" secondItem="VqU-eo-Lil" secondAttribute="trailing" constant="20" id="v7b-8k-D8g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XUS-AK-WOX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Appointment" id="6qb-zS-4qx">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YGK-Fn-Lh9"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="raq-xW-rQz"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etI-u0-dYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644.7265625" y="631.84480234260616"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sMA-tp-cBG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g9a-gx-jI1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fQA-Sb-Mwx">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xIy-qy-C8P" kind="relationship" relationship="rootViewController" id="nRK-8h-mrE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqe-Jx-xkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.50781249999989" y="631.84480234260616"/>
         </scene>
     </scenes>
     <resources>

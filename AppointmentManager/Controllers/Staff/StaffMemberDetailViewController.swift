@@ -8,23 +8,15 @@ protocol StaffMemberDetailDelegate {
 
 class StaffMemberDetailViewController: UIViewController {
     
+    //MARK: Outlets
     @IBOutlet weak var scheduleStackView: UIStackView!
     @IBOutlet var dayScheduleStackViews: [DayScheduleStackView]!
-    var dayScheduleLabels = [UIStackView]()
     
+    //MARK: Variables
+    var dayScheduleLabels = [UIStackView]()
     let staffCoreDataManager = StaffMemberCoreDataManager()
     let workingDayManager = WorkingDayCoreDataManager()
-    
     var delegate: StaffMemberDetailDelegate?
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.isHidden = (staffMember == nil)
-        if staffMember != nil {
-            self.navigationItem.rightBarButtonItem = self.editButtonItem
-        }
-    }
     
     var staffMember: StaffMember? {
         didSet {
@@ -32,6 +24,15 @@ class StaffMemberDetailViewController: UIViewController {
         }
     }
     
+    //MARK: Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.isHidden = (staffMember == nil)
+        if staffMember != nil {
+            self.navigationItem.rightBarButtonItem = self.editButtonItem
+        }
+    }
+        
     private func refreshUi() {
         loadViewIfNeeded()
         dayScheduleLabels.forEach({$0.removeFromSuperview()})
@@ -39,21 +40,14 @@ class StaffMemberDetailViewController: UIViewController {
         title = (staffMember?.firstName ?? "") + " " + (staffMember?.lastName ?? "")
     }
     
+    //MARK: Editing
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
         delegate?.didSetEditing(editing)
-        for dayScheduleStackView in dayScheduleStackViews {
-            UIView.animate(withDuration: 0.3) {
-                dayScheduleStackView.isHidden = !editing
-            }
-        }
         
-        for dayScheduleLabel in dayScheduleLabels {
-            UIView.animate(withDuration: 0.3) {
-                dayScheduleLabel.isHidden = editing
-            }
-        }
+        setHidden(!editing, toStacks: dayScheduleStackViews)
+        setHidden(editing, toStacks: dayScheduleLabels)
         
         if editing {
             if let workingDays = staffMember?.workingDays as? Set<WorkingDay> {
@@ -68,6 +62,15 @@ class StaffMemberDetailViewController: UIViewController {
         }
     }
     
+    func setHidden(_ hidden: Bool, toStacks stackViews: [UIStackView]) {
+        for stackView in stackViews {
+            UIView.animate(withDuration: 0.3) {
+                stackView.isHidden = hidden
+            }
+        }
+    }
+    
+    //MARK: Data manipulation
     func updateStaffMember() {
         
         guard let staffToEdit = staffMember else { return }
@@ -77,7 +80,7 @@ class StaffMemberDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
+    //MARK: Generating stack views
     func generateScheduleStackView() {
         
         guard let workingDaysArray = staffMember?.workingDays?.allObjects as? [WorkingDay] else { return }
@@ -94,6 +97,7 @@ class StaffMemberDetailViewController: UIViewController {
         
     }
     
+    //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ServiceListViewControllerEmbedSegue" {
             let destinationVc = segue.destination as! ServiceListViewController

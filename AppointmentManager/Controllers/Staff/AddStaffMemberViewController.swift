@@ -2,14 +2,11 @@ import UIKit
 
 class AddStaffMemberViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.isOpaque = false
-    }
-    
+    //MARK: Variables
     let staffCoreDataManager = StaffMemberCoreDataManager()
     let workingDayCoreDataManager = WorkingDayCoreDataManager()
     
+    //MARK: Outlets
     @IBOutlet var textFields: [UITextField]!
     @IBOutlet var dayScheduleViews: [DayScheduleStackView]!
     @IBOutlet weak var stackView: UIStackView!
@@ -17,6 +14,13 @@ class AddStaffMemberViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
     
+    //MARK: Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.isOpaque = false
+    }
+   
+    //MARK: Actions
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
         _ = validate(textField: sender)
     }
@@ -32,29 +36,32 @@ class AddStaffMemberViewController: UIViewController {
             return
         }
 
-        let textFieldsValid = textFields.map({validate(textField: $0)}).contains(false)
-        let dayScheduleValid = dayScheduleViews.map({$0.validateView()}).contains(false)
+        let textFieldsContainErrors = textFields.map({validate(textField: $0)}).contains(false)
+        let daysScheduleContainsError = dayScheduleViews.map({$0.validateView()}).contains(false)
         
-        if !textFieldsValid && !dayScheduleValid {
+        if !textFieldsContainErrors && !daysScheduleContainsError {
             createStaffMember()
         }
         
         dismiss(animated: true, completion: nil)
     }
     
+    //MARK: Data creation
     func createStaffMember() {
         
         guard let enteredFirstName = firstNameTextField.text, let enteredLastName = lastNameTextField.text, let enteredPosition = positionTextField.text else { return }
         
         let newStaffMember = staffCoreDataManager.createStaffMember(firstName: enteredFirstName, lastName: enteredLastName, position: enteredPosition)
-        let workingDays = workingDayCoreDataManager.createWorkingDays(from: dayScheduleViews.filter({$0.workingDaySwitch.isOn}))
+        
+        let selectedDayViews = dayScheduleViews.filter({$0.workingDaySwitch.isOn})
+        let workingDays = workingDayCoreDataManager.createWorkingDays(from: selectedDayViews)
+        
         newStaffMember.addToWorkingDays(workingDays)
         staffCoreDataManager.saveContext()
     
     }
     
-
-    
+    //MARK: Validations
     func generateInvalidDataAlert(message: String) {
         let alert = UIAlertController(title: "Invalid data", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

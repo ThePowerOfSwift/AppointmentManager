@@ -3,14 +3,23 @@ import UIKit
 @IBDesignable
 class DayScheduleStackView: UIStackView {
     
+    //MARK: Elemements
+    var startingHourStackView: HourPickerStackView? = nil
+    var endingHourStackView: HourPickerStackView? = nil
+    var selectedDay: Day = Day.monday
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter
+    }()
+    
+    //MARK: Outlets
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet weak var workingDaySwitch: UISwitch!
     @IBOutlet weak var errorMessage: UILabel!
     
-    var startingHourStackView: HourPickerStackView? = nil
-    var endingHourStackView: HourPickerStackView? = nil
-    
+    //MARK: Inspectables
     @IBInspectable var day: Int = 1 {
         didSet {
             dayLabel.text = Day.dayDictionary[day]
@@ -18,8 +27,7 @@ class DayScheduleStackView: UIStackView {
         }
     }
     
-    var selectedDay: Day = Day.monday
-    
+    //MARK: Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -37,6 +45,7 @@ class DayScheduleStackView: UIStackView {
         self.frame = bounds
     }
     
+    //MARK: Switch toggled
     @IBAction func switchToggled(_ sender: UISwitch) {
         if sender.isOn {
             startingHourStackView = HourPickerStackView()
@@ -60,8 +69,15 @@ class DayScheduleStackView: UIStackView {
             
     }
     
-    var viewIsValid: Bool {
-        return startingHourStackView?.selectedTime.compare(endingHourStackView!.selectedTime) == .orderedAscending
+    //MARK: Validations
+    fileprivate var viewIsValid: Bool {
+        guard let startingTime = startingHourStackView?.selectedTime, let startingDate = dateFormatter.date(from: startingTime) else {
+            return false
+        }
+        guard let endingTime = endingHourStackView?.selectedTime, let endingDate = dateFormatter.date(from: endingTime) else {
+            return false
+        }
+        return startingDate.compare(endingDate) == .orderedAscending
     }
     
     func validateView() -> Bool {
@@ -76,6 +92,7 @@ class DayScheduleStackView: UIStackView {
     }
     
     
+    //MARK: View configuration
     func configureView(startingDate: String, endingDate: String) {
         
         workingDaySwitch.isOn = true

@@ -11,7 +11,12 @@ class HourPickerStackView: UIStackView {
     }
     
     //MARK: Elements
-    fileprivate let dateFormatter = DateFormatter()
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter
+    }()
+    
     var isExpanded = false
     
     var selectedTime: String = "12:00" {
@@ -47,6 +52,7 @@ class HourPickerStackView: UIStackView {
         
     }
     
+    //MARK: Tapping hour
     @IBAction func hourTapped(_ sender: Any) {
         if isExpanded {
             UIView.animate(withDuration: 0.3) {
@@ -56,27 +62,31 @@ class HourPickerStackView: UIStackView {
             datepicker = nil
             isExpanded = false
         } else {
-            datepicker = UIDatePicker()
-            datepicker?.addTarget(self, action: #selector(datepickerValueChanged(_:)), for: .valueChanged)
-            datepicker?.datePickerMode = .time
-            datepicker?.minuteInterval = 5
-            dateFormatter.dateFormat = "HH:mm"
-            datepicker?.date = dateFormatter.date(from: "12:00")!
-            datepicker?.isHidden = true
-            stackView.addArrangedSubview(datepicker!)
-            UIView.animate(withDuration: 0.3) {
-                self.datepicker?.isHidden = false
-            }
+            addDatepicker()
             isExpanded = true
         }
         
     }
+    
+    //MARK: Adding datepicker
+    func addDatepicker() {
+        datepicker = UIDatePicker()
+        datepicker?.date = dateFormatter.date(from: "12:00")!
+        datepicker?.addTarget(self, action: #selector(datepickerValueChanged(_:)), for: .valueChanged)
+        datepicker?.datePickerMode = .time
+        datepicker?.minuteInterval = 5
+        datepicker?.isHidden = true
+        stackView.addArrangedSubview(datepicker!)
+        UIView.animate(withDuration: 0.3) {
+            self.datepicker?.isHidden = false
+        }
+    }
 }
 
+//MARK: Datepicker actions
 extension HourPickerStackView {
     
     @objc func datepickerValueChanged(_ sender: UIDatePicker) {
-        dateFormatter.dateFormat = "HH:mm"
         selectedTime = dateFormatter.string(from: sender.date)
     }
 }
